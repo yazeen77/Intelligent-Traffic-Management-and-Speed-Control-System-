@@ -1,0 +1,2079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-09 22:32:02 by Eclipse SUMO netconvert Version 1.22.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="osm.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="output"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="1"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</netconvertConfiguration>
+-->
+
+<edges version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <location netOffset="-686488.78,-992406.50" convBoundary="0.00,0.00,2345.59,1369.24" origBoundary="76.696361,8.973920,76.717670,8.986286" projParameter="+proj=utm +zone=43 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <edge id="-1083437763" from="7500406415" to="9928852205" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2254.33,971.08 2285.32,973.27 2342.93,976.43" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1083437763"/>
+        </lane>
+    </edge>
+    <edge id="-1116026256" from="10207564179" to="10207564177" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1855.72,383.93 1857.63,462.46 1870.55,565.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1116026256"/>
+        </lane>
+    </edge>
+    <edge id="-1274749359#0" from="12146436359" to="cluster_2570383468_7494627564" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1243.93,916.50 1245.12,932.44 1269.25,1014.19 1258.39,1066.88 1268.46,1184.14" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+        <param key="origTo" value="2570383468"/>
+    </edge>
+    <edge id="-1274749359#1" from="12146436331" to="12146436359" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1229.47,785.40 1237.10,824.73 1243.93,916.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+    </edge>
+    <edge id="-1274749359#2" from="3523084980" to="12146436331" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1237.21,614.75 1216.62,660.54 1213.73,704.31 1229.47,785.40" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+    </edge>
+    <edge id="-1312265151" from="12146414306" to="12146414290" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.77,235.28 1400.84,230.59 1431.64,235.38 1458.39,242.30 1473.33,243.92 1485.88,220.47 1490.28,213.99 1498.69,212.79 1557.18,221.73 1567.14,222.70 1572.76,221.18 1582.74,216.28 1587.14,207.64 1587.53,193.10 1586.72,166.49 1565.01,147.52 1567.77,21.64" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265151"/>
+        </lane>
+    </edge>
+    <edge id="-1312265152" from="12146414307" to="12146414306" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.33,250.50 1344.35,249.95 1344.77,235.28" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265152 1312265153"/>
+        </lane>
+    </edge>
+    <edge id="-1312265154" from="12146414321" to="12146414306" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1322.21,30.73 1319.41,49.79 1313.42,70.09 1303.13,90.38 1294.43,107.93 1295.35,113.89 1293.44,115.91 1291.38,124.11 1291.07,131.91 1291.26,149.56 1284.83,159.62 1289.48,186.67 1319.31,232.12 1344.77,235.28" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265154"/>
+        </lane>
+    </edge>
+    <edge id="-1312265157#0" from="12146414356" to="8853802823" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="680.07,932.22 697.82,933.92 717.16,928.25 757.80,918.31 795.69,931.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265157"/>
+        </lane>
+    </edge>
+    <edge id="-1312265157#1" from="12146414362" to="12146414356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="747.42,1057.23 765.73,1018.52 766.58,1012.06 711.80,989.32 692.47,976.84 682.90,964.95 680.07,932.22" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265157"/>
+        </lane>
+    </edge>
+    <edge id="-1312268116" from="12146423083" to="12146414356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="657.84,836.38 667.31,842.48 672.42,848.57 680.07,932.22" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268116"/>
+        </lane>
+    </edge>
+    <edge id="-1312268117#0" from="12146423087" to="12146423084" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="794.53,761.76 753.78,781.35 716.40,806.22 709.17,845.38" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="-1312268117#1" from="12146423091" to="12146423087" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="764.29,706.27 773.66,704.43 781.65,704.33 786.79,707.72 794.53,761.76" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="-1312268117#2" from="12146423093" to="12146423091" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="754.36,743.93 761.99,736.15 764.29,706.27" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="-1312268118" from="12146423095" to="12146423087" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="989.63,817.00 880.40,772.44 794.53,761.76" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268118"/>
+        </lane>
+    </edge>
+    <edge id="-1312268119#0" from="12146423097" to="12146423091" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="722.52,572.90 734.73,600.68 764.29,706.27" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268119"/>
+        </lane>
+    </edge>
+    <edge id="-1312268119#1" from="12146436303" to="12146423097" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="629.82,589.00 645.20,625.85 684.81,605.95 679.83,601.13 678.78,595.80 683.82,590.49 722.52,572.90" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268119"/>
+        </lane>
+    </edge>
+    <edge id="-1312268120#0" from="cluster_12146436309_12146436314" to="12146423097" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="735.95,401.74 733.12,442.34 740.59,459.95 763.46,536.49 760.75,543.59 719.03,554.23 722.52,572.90" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+        <param key="origFrom" value="12146436309"/>
+    </edge>
+    <edge id="-1312268120#1" from="12146436310" to="cluster_12146436309_12146436314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="697.95,382.79 735.95,401.74" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+        <param key="origTo" value="12146436309"/>
+    </edge>
+    <edge id="-1312268120#2" from="6897428809" to="12146436310" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="505.10,337.83 513.01,340.38 557.72,340.76 608.59,355.37 697.95,382.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+    </edge>
+    <edge id="-1312268121#1" from="12146436315" to="cluster_12146436309_12146436314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="803.40,378.29 739.03,377.28" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268121"/>
+        </lane>
+        <param key="origTo" value="12146436314"/>
+    </edge>
+    <edge id="-1312268122" from="12146436310" to="cluster_12146436309_12146436314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="697.95,382.79 739.03,377.28" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268122"/>
+        </lane>
+        <param key="origTo" value="12146436314"/>
+    </edge>
+    <edge id="-1312268123#0" from="12146436325" to="1051448636" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="906.70,554.58 954.77,497.64 984.23,465.64" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="-1312268123#1" from="12146436318" to="12146436325" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="873.52,586.98 905.32,556.21 906.70,554.58" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="-1312268123#2" from="12146436321" to="12146436318" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="854.15,676.96 858.36,656.56 859.31,605.57 873.52,586.98" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="-1312268123#3" from="12146436322" to="12146436321" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="-1312268124" from="12146436323" to="12146436321" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268124"/>
+        </lane>
+    </edge>
+    <edge id="-1312268125" from="12146436324" to="12146436318" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268125"/>
+        </lane>
+    </edge>
+    <edge id="-1312268126#0" from="12146436328" to="12146436325" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="983.89,617.70 967.16,602.52 945.93,590.51 906.70,554.58" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268126"/>
+        </lane>
+    </edge>
+    <edge id="-1312268126#1" from="12146436329" to="12146436328" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268126"/>
+        </lane>
+    </edge>
+    <edge id="-1312268127" from="12146436330" to="12146436328" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268127"/>
+        </lane>
+    </edge>
+    <edge id="-1312268128#0" from="12146436356" to="12146436331" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="989.56,923.78 991.02,920.35 992.82,918.04 1009.27,919.01 1016.07,918.68 1018.22,916.21 1021.32,903.79 1017.97,891.87 1018.37,884.23 1018.59,874.64 1019.74,859.71 1047.56,799.62 1081.41,785.56 1101.70,808.40 1107.06,808.95 1119.24,805.81 1162.22,793.58 1166.15,793.07 1174.00,796.83 1181.87,797.93 1229.47,785.40" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268128"/>
+        </lane>
+    </edge>
+    <edge id="-1312268128#1" from="12146436355" to="12146436356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="958.77,1084.59 958.97,1082.93 964.88,1041.92 975.43,1005.38 988.31,926.73 989.56,923.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268128"/>
+        </lane>
+    </edge>
+    <edge id="-1312268129" from="12146436358" to="12146436356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="898.72,900.40 941.30,911.31 989.56,923.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268129"/>
+        </lane>
+    </edge>
+    <edge id="-1312268130#0" from="12146436360" to="12146436359" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268130"/>
+        </lane>
+    </edge>
+    <edge id="-1312268130#1" from="12146436362" to="12146436360" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1133.73,950.50 1145.89,923.13 1147.58,914.93" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268130"/>
+        </lane>
+    </edge>
+    <edge id="-1312268131" from="12146436363" to="12146436360" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268131"/>
+        </lane>
+    </edge>
+    <edge id="-1312268132#0" from="12146436367" to="12146436364" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1610.40,815.01 1606.09,814.99 1600.88,809.56 1584.47,715.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268132"/>
+        </lane>
+    </edge>
+    <edge id="-1312268132#1" from="12146436371" to="12146436367" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1617.28,861.48 1625.92,858.56 1627.06,856.12 1627.79,851.73 1610.40,815.01" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268132"/>
+        </lane>
+    </edge>
+    <edge id="-1312268133" from="12146436373" to="12146436367" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1654.90,837.16 1641.37,806.16 1610.40,815.01" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268133"/>
+        </lane>
+    </edge>
+    <edge id="-1312268134#0" from="12146436581" to="12146436374" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1771.79,843.37 1772.17,840.99 1762.42,804.84 1773.30,730.16" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="-1312268134#1" from="12146436379" to="12146436581" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1754.07,977.10 1765.73,955.36 1763.40,897.68 1771.79,843.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="-1312268134#2" from="12146436395" to="12146436379" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1537.09,1153.88 1557.95,1152.14 1610.99,1146.63 1615.70,1149.47 1617.31,1156.04 1628.83,1166.87 1630.93,1171.34 1637.52,1175.59 1642.00,1175.84 1650.98,1173.54 1720.74,1142.45 1725.93,1141.30 1733.48,1140.41 1733.33,1122.36 1740.46,1112.07 1747.65,1037.09 1754.07,977.10" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="-1312268134#3" from="12146436402" to="12146436395" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1600.55,1253.99 1584.79,1229.92 1576.58,1204.89 1570.55,1200.17 1553.45,1187.13 1540.48,1172.89 1537.89,1168.97 1537.09,1153.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="-1312268134#4" from="12146436404" to="12146436402" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1604.22,1348.17 1610.74,1330.26 1600.55,1253.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="-1312268148#0" from="12146436467" to="12146436463" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1866.71,1360.37 1866.40,1361.69 1863.77,1368.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268148"/>
+        </lane>
+    </edge>
+    <edge id="-1312268149" from="7500406439" to="12146436467" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1891.63,1255.25 1891.13,1257.36 1888.90,1266.77 1866.71,1360.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268149 1312268150 1312268148"/>
+        </lane>
+    </edge>
+    <edge id="-1312268151" from="12146436470" to="12146436467" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1920.08,1369.24 1896.60,1361.07 1866.71,1360.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268151"/>
+        </lane>
+    </edge>
+    <edge id="-1312268157" from="12146436509" to="12146436506" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2140.51,1344.86 2145.48,1351.81 2147.78,1358.04 2149.53,1365.34" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268157"/>
+        </lane>
+    </edge>
+    <edge id="-1312268158" from="12146436512" to="12146436510" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2225.90,1313.50 2232.79,1254.45 2330.31,1279.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268158"/>
+        </lane>
+    </edge>
+    <edge id="-1312268159#0" from="12146436514" to="12146436513" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268159"/>
+        </lane>
+    </edge>
+    <edge id="-1312268159#1" from="7500406459" to="12146436514" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1858.52,826.87 1868.44,823.45 1900.37,808.79 1921.91,808.89 1946.83,813.85 1961.02,821.60 1973.64,836.00 1970.94,884.15" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268159"/>
+        </lane>
+    </edge>
+    <edge id="-1312268160#0" from="12146436522" to="12146436514" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2036.79,933.44 1987.26,890.25 1970.94,884.15" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="-1312268160#1" from="12146436535" to="12146436522" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2048.48,960.84 2039.82,953.92 2036.79,933.44" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="-1312268160#2" from="12146436525" to="12146436535" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2069.13,974.25 2049.81,961.91 2048.48,960.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="-1312268160#3" from="12146436531" to="12146436525" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2080.96,1077.36 2074.60,1061.35 2063.20,1051.34 2055.37,1040.46 2052.21,1030.86 2052.07,1020.02 2069.13,974.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="-1312268161" from="12146436534" to="12146436525" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2178.26,984.87 2127.31,979.48 2116.62,971.61 2069.13,974.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268161"/>
+        </lane>
+    </edge>
+    <edge id="-1312268162#0" from="12146436536" to="12146436535" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2061.49,943.82 2054.14,953.44 2048.48,960.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="-1312268162#1" from="12146436617" to="12146436536" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2130.95,865.53 2129.45,865.25 2121.58,867.35 2111.33,879.91 2092.07,906.83 2061.49,943.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="-1312268162#2" from="12146436621" to="12146436617" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2159.68,881.80 2158.54,878.89 2149.47,869.78 2141.25,867.44 2130.95,865.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="-1312268162#3" from="12146436534" to="12146436621" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2178.26,984.87 2177.41,973.32 2163.73,954.95 2160.01,948.19 2159.85,942.68 2168.40,913.41 2168.42,908.61 2167.37,902.56 2162.78,889.74 2159.68,881.80" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="-1312268163" from="12146436522" to="12146436536" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268163"/>
+        </lane>
+    </edge>
+    <edge id="-1312268164" from="12146436562" to="12146436534" name="Ezhukone Panchyat Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1887.90,1195.81 1896.25,1191.77 1922.86,1178.87 2004.15,1154.86 2027.68,1139.63 2037.89,1128.77 2071.61,1107.11 2096.35,1091.89 2135.09,1059.48 2141.14,1054.41 2157.97,1040.33 2165.48,1030.81 2177.81,1001.78 2178.07,991.78 2178.26,984.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268164"/>
+        </lane>
+    </edge>
+    <edge id="-1312268165" from="12146436572" to="12146436569" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2331.06,849.92 2328.74,845.99 2327.41,825.73 2331.86,792.71" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268165"/>
+        </lane>
+    </edge>
+    <edge id="-1312268166#0" from="12146436573" to="12146436379" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268166"/>
+        </lane>
+    </edge>
+    <edge id="-1312268166#1" from="12146436575" to="12146436573" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1651.88,905.58 1636.71,920.28 1643.27,980.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268166"/>
+        </lane>
+    </edge>
+    <edge id="-1312268167" from="12146436577" to="12146436573" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1641.73,1006.34 1644.65,988.77 1643.27,980.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268167"/>
+        </lane>
+    </edge>
+    <edge id="-1312268168" from="12146436581" to="12146436578" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1771.79,843.37 1689.38,858.87 1683.22,862.59 1694.90,888.44" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268168"/>
+        </lane>
+    </edge>
+    <edge id="-1312268169" from="12146436587" to="12146436582" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1978.59,623.93 1978.79,620.38 1991.43,592.37 1991.95,558.79 1976.16,529.94 1964.90,517.48" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268169"/>
+        </lane>
+    </edge>
+    <edge id="-1312268170" from="cluster_12146436604_7749951314" to="12146436595" name="RPS Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2239.79,349.06 2218.84,316.70 2223.31,288.84 2219.79,250.08 2216.78,212.79 2220.79,195.54 2232.96,190.15 2247.74,155.99 2274.99,132.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268170"/>
+        </lane>
+        <param key="origFrom" value="12146436604"/>
+    </edge>
+    <edge id="-1312268171#0" from="12146436614" to="7749951325" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2127.59,779.81 2133.29,748.33 2150.80,714.62 2163.84,707.53 2169.66,709.32 2181.82,716.91 2195.51,718.59 2199.99,715.51 2208.17,705.19 2228.70,654.46 2226.97,641.07" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="-1312268171#1" from="12146436615" to="12146436614" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="-1312268171#2" from="12146436617" to="12146436615" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2130.95,865.53 2132.30,842.79 2130.11,807.62" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="-1312268172" from="12146436621" to="12146436615" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2159.68,881.80 2169.71,865.71 2174.16,821.19 2162.63,815.97 2130.11,807.62" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268172"/>
+        </lane>
+    </edge>
+    <edge id="-1312268173" from="12146436622" to="12146436614" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268173"/>
+        </lane>
+    </edge>
+    <edge id="-1314413870" from="12165906021" to="12165906020" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413870"/>
+        </lane>
+    </edge>
+    <edge id="-1314413871#0" from="12165906029" to="8514866879" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413871"/>
+        </lane>
+    </edge>
+    <edge id="-1314413871#1" from="12165906025" to="12165906029" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.24,933.92 453.91,936.36 497.86,944.90" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413871"/>
+        </lane>
+    </edge>
+    <edge id="-1314413872" from="12165906028" to="12165906025" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="508.14,905.96 484.43,908.96 458.43,922.61 404.24,933.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413872"/>
+        </lane>
+    </edge>
+    <edge id="-1314413873" from="12165906038" to="12165906029" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="547.86,1348.79 551.23,1299.50 540.37,1214.68 560.94,1209.17 564.22,1164.80 541.16,1044.09 514.04,1017.28 501.64,1004.86 498.59,989.76 497.86,944.90" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413873"/>
+        </lane>
+    </edge>
+    <edge id="-1314413874" from="12165906050" to="8514866874" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="761.55,1352.00 749.14,1231.58 735.33,1221.75 734.27,1160.44 731.65,1148.44 694.97,1150.49 692.03,1108.73 626.73,1115.98 627.58,1030.70 640.58,993.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413874"/>
+        </lane>
+    </edge>
+    <edge id="-1314413875" from="12165906052" to="8853775489" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413875"/>
+        </lane>
+    </edge>
+    <edge id="-1314413876#0" from="12165906053" to="8853775491" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413876"/>
+        </lane>
+    </edge>
+    <edge id="-1314413876#1" from="12165906054" to="12165906053" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413876"/>
+        </lane>
+    </edge>
+    <edge id="-1314413877" from="12165906055" to="12165906053" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413877"/>
+        </lane>
+    </edge>
+    <edge id="-1314413878" from="12165906060" to="12165906056" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="198.67,746.47 303.20,721.16 322.73,708.37 350.56,683.29 416.93,668.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413878"/>
+        </lane>
+    </edge>
+    <edge id="-1314413879" from="12165906062" to="12165906061" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413879"/>
+        </lane>
+    </edge>
+    <edge id="-1314413880" from="12165906068" to="6897428811" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="534.15,523.14 510.39,532.12 501.21,465.10 493.84,447.22 475.53,450.84 473.85,375.09 468.13,359.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413880"/>
+        </lane>
+    </edge>
+    <edge id="-1314413882#0" from="12165906081" to="12165906069" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="539.27,50.84 580.05,82.69 622.49,102.37 657.68,118.70" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413882 1314413881"/>
+        </lane>
+    </edge>
+    <edge id="-1314413883#0" from="12165906071" to="12165906081" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="517.69,34.00 518.13,34.34 535.09,47.58 539.27,50.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413883 1314413884 1314413882"/>
+        </lane>
+    </edge>
+    <edge id="-1314413883#1" from="12165906073" to="12165906071" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="484.24,15.18 497.67,11.68 517.69,34.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413883"/>
+        </lane>
+    </edge>
+    <edge id="-1314413885#0" from="12165906081" to="7441594161" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="539.27,50.84 504.43,95.22 483.78,112.89 450.67,119.41 419.38,118.37 390.90,108.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413885"/>
+        </lane>
+    </edge>
+    <edge id="-1314413885#1" from="12165906083" to="12165906081" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="569.25,2.25 563.44,0.00 539.27,50.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413885"/>
+        </lane>
+    </edge>
+    <edge id="-1314413898" from="12165906145" to="12165906143" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="948.64,193.41 944.03,303.09 929.71,352.73" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413898"/>
+        </lane>
+    </edge>
+    <edge id="-1314413899#0" from="12165906147" to="12146436395" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1470.42,1153.60 1523.83,1149.16 1537.09,1153.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413899"/>
+        </lane>
+    </edge>
+    <edge id="-1314413899#1" from="12165906153" to="12165906147" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1452.29,1057.99 1438.77,1077.41 1436.79,1091.91 1431.42,1105.95 1428.05,1132.89 1444.71,1166.08 1470.42,1153.60" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413899"/>
+        </lane>
+    </edge>
+    <edge id="-1314413900" from="12165906155" to="12165906153" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1449.79,1031.61 1452.10,1036.01 1452.29,1057.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413900 1314413901"/>
+        </lane>
+    </edge>
+    <edge id="-1314413902#0" from="12165906156" to="12165906153" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413902"/>
+        </lane>
+    </edge>
+    <edge id="-1314413902#1" from="12165906163" to="12165906156" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1536.18,842.97 1536.86,864.06 1531.73,919.33 1521.75,1014.98 1518.57,1029.26 1487.77,1084.02 1472.59,1084.93 1452.13,1091.20" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413902"/>
+        </lane>
+    </edge>
+    <edge id="-1314413903" from="12165906147" to="12165906156" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1470.42,1153.60 1455.29,1119.06 1452.13,1091.20" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413903"/>
+        </lane>
+    </edge>
+    <edge id="-1314413904" from="12165906167" to="12146436395" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1557.05,1037.87 1542.94,1082.91 1542.37,1134.07 1537.09,1153.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413904"/>
+        </lane>
+    </edge>
+    <edge id="-1314413905" from="12165906169" to="12146436402" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1652.23,1277.53 1618.44,1256.46 1600.55,1253.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413905"/>
+        </lane>
+    </edge>
+    <edge id="-1314413906" from="12165906173" to="12165906170" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1181.10,343.88 1149.50,358.43 1118.34,362.92 1068.76,361.09" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413906"/>
+        </lane>
+    </edge>
+    <edge id="-1314413907" from="12165906177" to="12165906174" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1204.42,448.53 1173.55,453.72 1175.65,482.15 1153.72,501.18" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413907"/>
+        </lane>
+    </edge>
+    <edge id="-240191538#0" from="1051448636" to="345210881" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="984.23,465.64 929.53,431.92 878.41,415.92 860.18,407.61 829.41,378.14 793.79,340.51 784.59,330.50 779.90,326.33 757.78,310.14 737.21,299.77" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="240191538 281834392 290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-240191538#1" from="3523084980" to="1051448636" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1237.21,614.75 1216.09,599.21 1172.50,564.62 1099.05,506.95 1083.61,499.43 1013.91,478.27 984.23,465.64" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="240191538"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-240191538#2" from="2579340219" to="3523084980" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1373.61,677.25 1311.56,656.90 1276.62,639.80 1237.21,614.75" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="240191538"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-250523005#0" from="2570383252" to="2570383494" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1102.01,1205.05 1094.07,1263.03 1086.29,1287.02 1053.12,1316.18" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250523005"/>
+        </lane>
+    </edge>
+    <edge id="-250523005#1" from="cluster_2570383468_7494627564" to="2570383252" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1268.46,1184.14 1249.88,1184.82 1125.09,1189.34 1102.01,1205.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250523005"/>
+        </lane>
+        <param key="origFrom" value="2570383468"/>
+    </edge>
+    <edge id="-250635319#1" from="8853804378" to="cluster_2570383468_7494627564" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1287.42,1278.68 1271.02,1196.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250635319"/>
+        </lane>
+        <param key="origTo" value="7494627564"/>
+    </edge>
+    <edge id="-251742510#0" from="7016611730" to="5684822320" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1106.00,34.78 1091.99,37.12 1050.07,39.26" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251742510"/>
+        </lane>
+    </edge>
+    <edge id="-251742510#1" from="7016611728" to="7016611730" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1094.79,14.12 1105.48,29.96 1106.00,34.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251742510"/>
+        </lane>
+    </edge>
+    <edge id="-251750366#0" from="10207564177" to="2579340198" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1870.55,565.25 1846.59,578.75 1791.25,590.01 1731.12,595.24 1647.56,603.96 1550.99,604.23 1480.79,595.51 1453.98,598.50 1422.06,608.91 1393.10,638.16 1383.15,641.13" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="-251750366#1" from="12146436582" to="10207564177" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1964.90,517.48 1912.42,541.64 1870.55,565.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="-251750366#2" from="8853240210" to="12146436582" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2010.28,492.24 1991.29,505.32 1964.90,517.48" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="-251750366#3" from="2579340132" to="8853240210" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2151.07,366.84 2107.60,411.13 2074.61,447.91 2010.28,492.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="-251750366#4" from="cluster_12146436604_7749951314" to="2579340132" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2217.60,353.39 2183.22,359.47 2151.07,366.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+        <param key="origFrom" value="7749951314"/>
+    </edge>
+    <edge id="-251750366#6" from="2579340113" to="cluster_12146436604_7749951314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2300.94,336.95 2239.79,349.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+        <param key="origTo" value="12146436604"/>
+    </edge>
+    <edge id="-290364427#0" from="7441594172" to="245582383" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="365.03,209.30 326.28,199.00 286.01,191.80 226.32,168.30 211.72,162.69 192.95,155.48 166.06,148.09 146.90,133.10 125.95,116.73 90.25,84.57" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-290364427#1" from="6897428808" to="7441594172" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="540.57,254.47 483.88,237.19 379.08,213.04 365.03,209.30" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-290364427#2" from="5684822309" to="6897428808" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="606.09,271.57 565.33,262.01 540.57,254.47" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-290364427#3" from="345210881" to="5684822309" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="737.21,299.77 630.04,277.18 606.09,271.57" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-311264111#0" from="12146436510" to="3168617968" name="Ezhukone - Irumpanangadu Road" priority="3" type="highway.residential" numLanes="1" speed="16.67" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="311264111"/>
+        </lane>
+    </edge>
+    <edge id="-311264111#1" from="3168617970" to="12146436510" name="Ezhukone - Irumpanangadu Road" priority="3" type="highway.residential" numLanes="1" speed="16.67" shape="2339.08,1360.41 2327.89,1308.28 2330.31,1279.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="311264111"/>
+        </lane>
+    </edge>
+    <edge id="-561717020#0" from="8853777187" to="5415985132" name="Karipuram - Checrankavu Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="264.74,1352.61 240.95,1351.95 206.72,1353.84 168.96,1355.72 135.01,1361.12" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="561717020"/>
+        </lane>
+    </edge>
+    <edge id="-561717020#1" from="5415985127" to="8853777187" name="Karipuram - Checrankavu Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="299.59,1362.19 278.40,1353.00 264.74,1352.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="561717020"/>
+        </lane>
+    </edge>
+    <edge id="-596889246" from="5684822299" to="5684822316" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889246"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#0" from="12165906143" to="345210881" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="929.71,352.73 923.70,350.90 833.52,334.07 780.06,315.89 770.02,311.32 762.25,306.90 737.21,299.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#1" from="5684822526" to="12165906143" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1045.01,395.42 1030.29,389.77 1013.24,378.27 929.71,352.73" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#2" from="12165906170" to="5684822526" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1068.76,361.09 1053.60,389.30 1045.01,395.42" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#3" from="5684822320" to="12165906170" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1050.07,39.26 1076.96,123.63 1108.45,202.31 1074.11,228.52 1080.29,294.19 1090.19,321.19 1068.76,361.09" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#4" from="5684822299" to="5684822320" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#5" from="5684822316" to="5684822299" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="798.59,42.92 875.91,34.77 923.99,32.66 1003.05,34.19 1029.48,37.04" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#6" from="5684822314" to="5684822316" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="709.75,53.65 741.34,48.22 798.59,42.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#7" from="12165906069" to="5684822314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="657.68,118.70 677.72,93.05 709.75,53.65" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-596889247#8" from="5684822309" to="12165906069" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="606.09,271.57 616.92,227.86 636.33,175.79 653.98,123.42 657.68,118.70" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="-620945896#0" from="12146436364" to="2579340219" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1584.47,715.68 1557.50,718.10 1529.41,714.48 1465.35,690.50 1396.57,682.77 1373.61,677.25" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945896#1" from="12146436374" to="12146436364" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1773.30,730.16 1751.20,725.04 1690.17,713.82 1637.00,710.96 1584.47,715.68" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945896#2" from="2479468029" to="12146436374" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1840.86,745.98 1820.71,742.54 1789.81,734.00 1773.30,730.16" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945896#3" from="7749951325" to="2479468029" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="2226.97,641.07 2192.65,641.76 2147.33,650.00 2110.61,660.52 2039.00,681.04 1940.61,711.81 1856.53,743.21 1840.86,745.98" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945896#4" from="7500406402" to="7749951325" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="2280.28,656.02 2262.30,648.27 2232.69,640.95 2226.97,641.07" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945896#5" from="7500339350" to="7500406402" priority="13" type="highway.trunk" numLanes="1" speed="19.44" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="-620945897#0" from="12165906174" to="2579340198" name="esi road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1153.72,501.18 1157.55,504.34 1178.68,524.94 1203.38,542.06 1246.89,575.07 1279.82,597.50 1327.49,621.75 1360.46,634.80 1383.15,641.13" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945897"/>
+        </lane>
+    </edge>
+    <edge id="-620945897#1" from="5684822526" to="12165906174" name="esi road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1045.01,395.42 1047.11,404.19 1053.84,414.47 1068.83,427.74 1092.92,446.60 1111.72,464.86 1131.10,482.52 1153.72,501.18" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945897"/>
+        </lane>
+    </edge>
+    <edge id="-736702743#0" from="7500235953" to="6897428808" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="-736702743#1" from="6897428809" to="7500235953" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="-736702743#2" from="6897428811" to="6897428809" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="468.13,359.05 480.87,347.10 505.10,337.83" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="-736702743#3" from="6897428812" to="6897428811" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="381.12,358.06 424.19,358.55 468.13,359.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="-736702744" from="6897428814" to="6897428812" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="388.26,545.85 379.14,501.74 374.56,478.18 374.11,454.05 376.77,405.80 378.36,379.58 381.12,358.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702744 736702743"/>
+        </lane>
+    </edge>
+    <edge id="-736702745" from="7564569545" to="6897428814" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="325.25,574.17 342.17,569.59 357.34,562.06 388.26,545.85" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702745"/>
+        </lane>
+    </edge>
+    <edge id="-750405609" from="2579339966" to="2579340132" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1994.27,21.37 2019.50,47.86 2046.37,83.48 2062.97,95.32 2085.30,121.08 2104.42,163.14 2115.31,208.28 2116.13,240.17 2139.29,295.44 2135.74,329.72 2143.69,356.38 2145.26,361.67 2151.07,366.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="750405609 750405608 251750367"/>
+        </lane>
+    </edge>
+    <edge id="-757219356#0" from="12165906071" to="7016611698" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="517.69,34.00 525.25,24.86 532.06,7.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="-757219356#1" from="7441594088" to="12165906071" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.62,96.06 422.92,101.88 439.57,100.86 457.54,96.01 474.16,85.27 489.23,70.43 503.87,50.71 517.69,34.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="-757219356#2" from="7016592083" to="7441594088" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="197.66,4.08 222.34,26.13 247.84,41.50 255.89,45.90 272.66,51.67 297.63,61.22 325.08,64.35 381.78,81.84 400.53,94.37 404.62,96.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="-795605759#0" from="7441594161" to="7441594088" name="canal road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="390.90,108.24 395.34,104.37 404.62,96.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="795605759 854277421"/>
+        </lane>
+    </edge>
+    <edge id="-795605759#1" from="7441594172" to="7441594161" name="canal road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="365.03,209.30 361.06,197.84 361.53,189.41 362.45,181.75 363.97,174.15 364.94,168.93 365.35,163.02 368.01,156.60 369.66,149.31 373.91,138.77 376.81,129.20 379.37,123.47 384.85,115.50 390.90,108.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="795605759"/>
+        </lane>
+    </edge>
+    <edge id="-801313290" from="6897428812" to="7494442941" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="381.12,358.06 284.39,349.97 272.89,348.16 262.00,345.76 251.98,343.37 175.60,315.77 168.83,311.93 145.59,298.93 137.66,293.03 130.02,287.43 123.26,281.25 116.80,276.23 107.08,272.08 98.84,269.11 88.83,265.26 79.69,261.70 69.68,257.26 62.95,253.53 50.60,244.68 36.50,231.71 22.97,223.46 8.85,217.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801313290 801313289 801313288"/>
+        </lane>
+    </edge>
+    <edge id="-801336201#0" from="12165906155" to="2579340219" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1449.79,1031.61 1451.64,1019.76 1452.88,1008.04 1449.43,991.02 1449.50,974.04 1448.97,961.72 1446.08,948.81 1438.46,936.48 1433.23,922.25 1433.33,899.40 1433.40,885.33 1432.27,873.02 1427.02,860.69 1425.32,847.79 1425.05,834.79 1423.03,823.35 1418.67,811.90 1415.22,799.39 1408.82,780.61 1400.06,760.64 1392.47,743.02 1386.64,726.58 1381.99,713.67 1373.80,697.22 1373.61,677.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801336201"/>
+        </lane>
+    </edge>
+    <edge id="-801337281" from="cluster_2570383468_7494627564" to="12165906155" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1271.02,1196.88 1283.98,1198.58 1304.03,1200.43 1324.07,1204.63 1341.75,1205.89 1359.45,1204.80 1381.24,1208.60 1399.53,1209.27 1419.60,1205.85 1434.38,1198.88 1449.11,1184.01 1432.63,1175.73 1419.73,1159.25 1416.85,1144.01 1413.38,1130.51 1412.29,1111.76 1414.74,1091.25 1424.29,1068.28 1431.40,1058.93 1439.13,1047.83 1448.61,1039.08 1449.79,1031.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801337281 801337280 801336201"/>
+        </lane>
+        <param key="origFrom" value="7494627564"/>
+    </edge>
+    <edge id="-801875603#0" from="7500406415" to="7500406402" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2254.33,971.08 2252.70,957.57 2244.31,935.58 2254.03,915.38 2263.73,901.92 2259.85,882.20 2261.74,840.00 2259.62,810.17 2265.44,778.12 2280.27,755.68 2296.26,728.75 2304.32,698.96 2298.19,677.55 2280.28,656.02" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#1" from="9928852202" to="7500406415" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2242.10,1014.67 2242.26,1010.98 2248.01,991.88 2254.33,971.08" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#2" from="7500406439" to="9928852202" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1891.63,1255.25 1906.37,1253.64 1930.74,1249.25 1947.17,1248.76 1972.12,1244.94 1986.32,1233.75 2010.18,1220.35 2028.90,1213.13 2049.89,1207.60 2063.00,1189.09 2083.49,1168.93 2101.11,1154.94 2114.77,1141.50 2128.98,1131.44 2143.17,1124.18 2147.16,1118.02 2158.54,1107.38 2174.99,1102.95 2198.27,1091.81 2215.81,1093.57 2226.13,1068.87 2240.99,1039.67 2242.10,1014.67" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#3" from="12146436562" to="7500406439" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1887.90,1195.81 1889.63,1198.97 1888.95,1223.72 1888.28,1245.10 1891.63,1255.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#4" from="12146436513" to="12146436562" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1861.04,919.77 1864.82,932.68 1868.06,966.47 1872.50,986.19 1874.55,1031.21 1859.20,1043.52 1840.44,1058.63 1829.01,1081.08 1839.69,1098.01 1856.01,1120.60 1858.76,1138.05 1873.92,1166.26 1880.08,1181.49 1887.90,1195.81" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#5" from="7500406459" to="12146436513" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1858.52,826.87 1846.59,832.43 1843.15,840.87 1844.33,850.36 1846.43,867.33 1853.11,892.68 1861.04,919.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-801875603#6" from="2479468029" to="7500406459" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1840.86,745.98 1853.98,755.80 1856.66,782.47 1860.55,806.77 1858.52,826.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="-809006623" from="2579340198" to="2579340219" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1383.15,641.13 1378.51,661.39 1373.61,677.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="809006623"/>
+        </lane>
+    </edge>
+    <edge id="-830270079" from="7749951327" to="cluster_12146436604_7749951314" name="Ezhukone THS Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2277.84,465.57 2259.11,446.79 2243.39,425.77 2239.34,405.93 2236.41,389.08 2221.80,371.81 2217.60,353.39" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270079"/>
+        </lane>
+        <param key="origTo" value="7749951314"/>
+    </edge>
+    <edge id="-830270080" from="7749951325" to="7749951326" name="Ezhukone THS Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2226.97,641.07 2224.77,624.65 2234.27,605.25 2243.01,587.34 2255.49,575.43 2269.44,563.84 2277.41,557.21 2292.23,528.85" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270080"/>
+        </lane>
+    </edge>
+    <edge id="-830270081" from="7749951326" to="7749951327" name="Polytechni School road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270081"/>
+        </lane>
+    </edge>
+    <edge id="-916761965#0" from="8853763394" to="8514867161" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="819.90,1130.68 827.01,1139.59 837.76,1153.39 847.24,1170.92 855.68,1194.20 866.42,1211.48 882.23,1218.56 900.33,1218.14 922.47,1218.25 930.01,1218.52 925.15,1234.50 924.83,1250.23 925.78,1262.73 926.23,1275.47 927.40,1292.46 928.85,1303.97 934.36,1310.49 939.91,1318.66 944.11,1344.16 950.79,1363.21" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="-916761965#1" from="12146414362" to="8853763394" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="747.42,1057.23 762.48,1063.59 775.49,1076.64 785.75,1088.43 800.99,1110.00 816.01,1125.80 819.90,1130.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="-916761965#2" from="8514866874" to="12146414362" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="640.58,993.82 665.15,1011.42 671.90,1019.20 688.95,1029.02 713.07,1035.63 728.12,1043.95 745.16,1056.27 747.42,1057.23" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="-916761965#3" from="8514866879" to="8514866874" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="562.53,957.48 570.35,952.77 580.42,950.82 591.94,962.36 602.46,969.91 640.58,993.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="-916761965#4" from="8514866880" to="8514866879" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="-916761966" from="8514866898" to="8514866897" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761966"/>
+        </lane>
+    </edge>
+    <edge id="-923060265#0" from="8853775506" to="8568746957" name="Mukkoodu Ground road" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="923060265"/>
+        </lane>
+    </edge>
+    <edge id="-923060265#1" from="8568746960" to="8853775506" name="Mukkoodu Ground road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="426.81,1001.06 427.08,1009.00 428.60,1052.84 414.28,1087.23 411.27,1093.27" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="923060265"/>
+        </lane>
+    </edge>
+    <edge id="-956553914" from="8852704957" to="5684822314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956553914"/>
+        </lane>
+    </edge>
+    <edge id="-956554408#0" from="12146414307" to="7016611730" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.33,250.50 1319.81,249.71 1305.92,249.27 1262.48,247.88 1204.67,249.02 1189.35,243.32 1162.66,199.83 1144.46,153.09 1134.28,111.55 1120.09,66.00 1106.00,34.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554408 956554410 956554409"/>
+        </lane>
+    </edge>
+    <edge id="-956554408#1" from="10207564179" to="12146414307" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1855.72,383.93 1852.24,383.78 1807.44,374.90 1796.41,361.02 1717.68,345.41 1648.70,310.16 1591.19,299.59 1520.43,290.57 1457.94,283.02 1441.15,290.68 1424.87,290.60 1417.18,269.70 1401.38,265.18 1368.81,267.37 1348.36,250.63 1344.33,250.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554408"/>
+        </lane>
+    </edge>
+    <edge id="-956554408#2" from="8852708571" to="10207564179" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554408"/>
+        </lane>
+    </edge>
+    <edge id="-956615113" from="8853274024" to="8852708571" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1881.10,1.78 1859.45,39.88 1849.67,62.82 1851.49,74.08 1865.04,105.79 1894.06,158.44 1904.13,171.85 1931.82,205.27 1951.16,208.63 1977.13,257.52 1933.13,280.06 1942.81,328.39 1944.73,348.50 1945.59,357.58 1948.50,387.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956615113 956615115 956615114"/>
+        </lane>
+    </edge>
+    <edge id="-956615114#0" from="8852708571" to="8853240210" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1948.50,387.99 1955.97,440.04 1992.47,456.15 2010.28,492.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956615114"/>
+        </lane>
+    </edge>
+    <edge id="-956668902" from="8853777187" to="8514866915" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="264.74,1352.61 257.72,1280.45 237.18,1282.23 235.84,1266.28 231.31,1226.41 204.43,1222.54 204.71,1212.93 202.72,1181.97 189.01,1136.42 175.76,1092.99 163.68,1055.66 163.32,1030.34 164.67,992.15 170.04,955.13 180.05,929.31 182.81,921.79 180.51,914.62 174.09,912.08 165.74,908.56 158.94,906.79 149.02,905.00 136.19,902.43 127.64,901.22 122.94,907.01 114.97,907.16 109.90,908.11 102.29,910.39 96.08,907.27 90.06,907.24 82.44,911.46 75.81,916.07 67.24,916.22 56.34,917.33 40.76,919.97 36.89,915.69 30.48,913.54 21.33,914.07 10.42,915.57 1.07,916.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956668902 916761967"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#0" from="12165906061" to="6897428814" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="412.13,637.19 410.59,627.11 397.57,584.63 388.26,545.85" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#1" from="12165906056" to="12165906061" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#2" from="8853775489" to="12165906056" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="464.49,756.99 443.83,734.40 428.36,714.40 418.83,681.31 416.93,668.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#3" from="8853775491" to="8853775489" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="473.10,782.60 476.45,774.40 464.49,756.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#4" from="12165906025" to="8853775491" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.24,933.92 404.16,895.26 404.12,852.60 415.01,842.81 411.22,795.67 442.63,790.19 473.10,782.60" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956669866#5" from="8853775506" to="12165906025" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="411.27,1093.27 405.85,1091.02 380.88,1079.41 376.69,1069.32 383.39,1048.24 392.21,1030.23 393.72,1007.03 395.71,985.72 398.84,973.78 404.30,963.71 404.24,933.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="-956670123#0" from="8853756715" to="8853763394" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="913.51,1088.07 898.31,1089.55 861.70,1097.35 845.62,1105.02 843.66,1120.24 836.55,1125.60 819.90,1130.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="-956670123#1" from="12146436355" to="8853756715" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="958.77,1084.59 943.87,1085.08 913.51,1088.07" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="-956670123#2" from="2570383252" to="12146436355" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1102.01,1205.05 1093.70,1189.62 1065.75,1159.95 1024.38,1127.41 999.92,1108.77 996.26,1084.84 981.63,1083.85 958.77,1084.59" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="-956670654#0" from="8853802823" to="8853756715" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="795.69,931.77 838.50,961.75 843.16,973.25 836.03,985.17 870.31,1021.68 887.20,1043.31 895.69,1044.06 912.44,1044.37 913.51,1088.07" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670654"/>
+        </lane>
+    </edge>
+    <edge id="-956670654#1" from="8853802826" to="8853802823" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="845.94,883.02 838.84,888.61 814.78,884.98 795.69,931.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670654"/>
+        </lane>
+    </edge>
+    <edge id="-956671340" from="8853804378" to="8853804372" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1287.42,1278.68 1324.75,1281.42 1353.52,1286.24 1362.44,1294.49 1361.59,1326.59 1364.10,1344.66 1356.95,1359.40" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956671340"/>
+        </lane>
+    </edge>
+    <edge id="1083437762" from="9928852202" to="3168617968" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2242.10,1014.67 2334.17,1037.64 2327.48,1056.13 2327.76,1097.63 2334.67,1132.11 2338.98,1177.69" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1083437762 956670966"/>
+        </lane>
+    </edge>
+    <edge id="1083437763" from="9928852205" to="7500406415" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2342.93,976.43 2285.32,973.27 2254.33,971.08" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1083437763"/>
+        </lane>
+    </edge>
+    <edge id="1116026256" from="10207564177" to="10207564179" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1870.55,565.25 1857.63,462.46 1855.72,383.93" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1116026256"/>
+        </lane>
+    </edge>
+    <edge id="1274749359#0" from="cluster_2570383468_7494627564" to="12146436359" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1268.46,1184.14 1258.39,1066.88 1269.25,1014.19 1245.12,932.44 1243.93,916.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+        <param key="origFrom" value="2570383468"/>
+    </edge>
+    <edge id="1274749359#1" from="12146436359" to="12146436331" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1243.93,916.50 1237.10,824.73 1229.47,785.40" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+    </edge>
+    <edge id="1274749359#2" from="12146436331" to="3523084980" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1229.47,785.40 1213.73,704.31 1216.62,660.54 1237.21,614.75" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1274749359"/>
+        </lane>
+    </edge>
+    <edge id="1312265151" from="12146414290" to="12146414306" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1567.77,21.64 1565.01,147.52 1586.72,166.49 1587.53,193.10 1587.14,207.64 1582.74,216.28 1572.76,221.18 1567.14,222.70 1557.18,221.73 1498.69,212.79 1490.28,213.99 1485.88,220.47 1473.33,243.92 1458.39,242.30 1431.64,235.38 1400.84,230.59 1344.77,235.28" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265151"/>
+        </lane>
+    </edge>
+    <edge id="1312265153" from="12146414306" to="12146414307" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.77,235.28 1344.35,249.95 1344.33,250.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265153 1312265152"/>
+        </lane>
+    </edge>
+    <edge id="1312265154" from="12146414306" to="12146414321" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.77,235.28 1319.31,232.12 1289.48,186.67 1284.83,159.62 1291.26,149.56 1291.07,131.91 1291.38,124.11 1293.44,115.91 1295.35,113.89 1294.43,107.93 1303.13,90.38 1313.42,70.09 1319.41,49.79 1322.21,30.73" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265154"/>
+        </lane>
+    </edge>
+    <edge id="1312265157#0" from="8853802823" to="12146414356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="795.69,931.77 757.80,918.31 717.16,928.25 697.82,933.92 680.07,932.22" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265157"/>
+        </lane>
+    </edge>
+    <edge id="1312265157#1" from="12146414356" to="12146414362" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="680.07,932.22 682.90,964.95 692.47,976.84 711.80,989.32 766.58,1012.06 765.73,1018.52 747.42,1057.23" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312265157"/>
+        </lane>
+    </edge>
+    <edge id="1312268116" from="12146414356" to="12146423083" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="680.07,932.22 672.42,848.57 667.31,842.48 657.84,836.38" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268116"/>
+        </lane>
+    </edge>
+    <edge id="1312268117#0" from="12146423084" to="12146423087" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="709.17,845.38 716.40,806.22 753.78,781.35 794.53,761.76" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="1312268117#1" from="12146423087" to="12146423091" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="794.53,761.76 786.79,707.72 781.65,704.33 773.66,704.43 764.29,706.27" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="1312268117#2" from="12146423091" to="12146423093" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="764.29,706.27 761.99,736.15 754.36,743.93" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268117"/>
+        </lane>
+    </edge>
+    <edge id="1312268118" from="12146423087" to="12146423095" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="794.53,761.76 880.40,772.44 989.63,817.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268118"/>
+        </lane>
+    </edge>
+    <edge id="1312268119#0" from="12146423091" to="12146423097" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="764.29,706.27 734.73,600.68 722.52,572.90" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268119"/>
+        </lane>
+    </edge>
+    <edge id="1312268119#1" from="12146423097" to="12146436303" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="722.52,572.90 683.82,590.49 678.78,595.80 679.83,601.13 684.81,605.95 645.20,625.85 629.82,589.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268119"/>
+        </lane>
+    </edge>
+    <edge id="1312268120#0" from="12146423097" to="cluster_12146436309_12146436314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="722.52,572.90 719.03,554.23 760.75,543.59 763.46,536.49 740.59,459.95 733.12,442.34 735.95,401.74" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+        <param key="origTo" value="12146436309"/>
+    </edge>
+    <edge id="1312268120#1" from="cluster_12146436309_12146436314" to="12146436310" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="735.95,401.74 697.95,382.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+        <param key="origFrom" value="12146436309"/>
+    </edge>
+    <edge id="1312268120#2" from="12146436310" to="6897428809" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="697.95,382.79 608.59,355.37 557.72,340.76 513.01,340.38 505.10,337.83" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268120"/>
+        </lane>
+    </edge>
+    <edge id="1312268121#1" from="cluster_12146436309_12146436314" to="12146436315" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="739.03,377.28 803.40,378.29" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268121"/>
+        </lane>
+        <param key="origFrom" value="12146436314"/>
+    </edge>
+    <edge id="1312268122" from="cluster_12146436309_12146436314" to="12146436310" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="739.03,377.28 697.95,382.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268122"/>
+        </lane>
+        <param key="origFrom" value="12146436314"/>
+    </edge>
+    <edge id="1312268123#0" from="1051448636" to="12146436325" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="984.23,465.64 954.77,497.64 906.70,554.58" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="1312268123#1" from="12146436325" to="12146436318" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="906.70,554.58 905.32,556.21 873.52,586.98" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="1312268123#2" from="12146436318" to="12146436321" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="873.52,586.98 859.31,605.57 858.36,656.56 854.15,676.96" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="1312268123#3" from="12146436321" to="12146436322" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268123"/>
+        </lane>
+    </edge>
+    <edge id="1312268124" from="12146436321" to="12146436323" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268124"/>
+        </lane>
+    </edge>
+    <edge id="1312268125" from="12146436318" to="12146436324" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268125"/>
+        </lane>
+    </edge>
+    <edge id="1312268126#0" from="12146436325" to="12146436328" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="906.70,554.58 945.93,590.51 967.16,602.52 983.89,617.70" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268126"/>
+        </lane>
+    </edge>
+    <edge id="1312268126#1" from="12146436328" to="12146436329" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268126"/>
+        </lane>
+    </edge>
+    <edge id="1312268127" from="12146436328" to="12146436330" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268127"/>
+        </lane>
+    </edge>
+    <edge id="1312268128#0" from="12146436331" to="12146436356" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1229.47,785.40 1181.87,797.93 1174.00,796.83 1166.15,793.07 1162.22,793.58 1119.24,805.81 1107.06,808.95 1101.70,808.40 1081.41,785.56 1047.56,799.62 1019.74,859.71 1018.59,874.64 1018.37,884.23 1017.97,891.87 1021.32,903.79 1018.22,916.21 1016.07,918.68 1009.27,919.01 992.82,918.04 991.02,920.35 989.56,923.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268128"/>
+        </lane>
+    </edge>
+    <edge id="1312268128#1" from="12146436356" to="12146436355" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="989.56,923.78 988.31,926.73 975.43,1005.38 964.88,1041.92 958.97,1082.93 958.77,1084.59" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268128"/>
+        </lane>
+    </edge>
+    <edge id="1312268129" from="12146436356" to="12146436358" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="989.56,923.78 941.30,911.31 898.72,900.40" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268129"/>
+        </lane>
+    </edge>
+    <edge id="1312268130#0" from="12146436359" to="12146436360" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268130"/>
+        </lane>
+    </edge>
+    <edge id="1312268130#1" from="12146436360" to="12146436362" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1147.58,914.93 1145.89,923.13 1133.73,950.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268130"/>
+        </lane>
+    </edge>
+    <edge id="1312268131" from="12146436360" to="12146436363" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268131"/>
+        </lane>
+    </edge>
+    <edge id="1312268132#0" from="12146436364" to="12146436367" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1584.47,715.68 1600.88,809.56 1606.09,814.99 1610.40,815.01" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268132"/>
+        </lane>
+    </edge>
+    <edge id="1312268132#1" from="12146436367" to="12146436371" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1610.40,815.01 1627.79,851.73 1627.06,856.12 1625.92,858.56 1617.28,861.48" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268132"/>
+        </lane>
+    </edge>
+    <edge id="1312268133" from="12146436367" to="12146436373" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1610.40,815.01 1641.37,806.16 1654.90,837.16" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268133"/>
+        </lane>
+    </edge>
+    <edge id="1312268134#0" from="12146436374" to="12146436581" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1773.30,730.16 1762.42,804.84 1772.17,840.99 1771.79,843.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="1312268134#1" from="12146436581" to="12146436379" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1771.79,843.37 1763.40,897.68 1765.73,955.36 1754.07,977.10" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="1312268134#2" from="12146436379" to="12146436395" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1754.07,977.10 1747.65,1037.09 1740.46,1112.07 1733.33,1122.36 1733.48,1140.41 1725.93,1141.30 1720.74,1142.45 1650.98,1173.54 1642.00,1175.84 1637.52,1175.59 1630.93,1171.34 1628.83,1166.87 1617.31,1156.04 1615.70,1149.47 1610.99,1146.63 1557.95,1152.14 1537.09,1153.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="1312268134#3" from="12146436395" to="12146436402" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1537.09,1153.88 1537.89,1168.97 1540.48,1172.89 1553.45,1187.13 1570.55,1200.17 1576.58,1204.89 1584.79,1229.92 1600.55,1253.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="1312268134#4" from="12146436402" to="12146436404" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1600.55,1253.99 1610.74,1330.26 1604.22,1348.17" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268134"/>
+        </lane>
+    </edge>
+    <edge id="1312268148#0" from="12146436463" to="12146436467" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1863.77,1368.00 1866.40,1361.69 1866.71,1360.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268148"/>
+        </lane>
+    </edge>
+    <edge id="1312268148#1" from="12146436467" to="7500406439" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1866.71,1360.37 1888.90,1266.77 1891.13,1257.36 1891.63,1255.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268148 1312268150 1312268149"/>
+        </lane>
+    </edge>
+    <edge id="1312268151" from="12146436467" to="12146436470" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1866.71,1360.37 1896.60,1361.07 1920.08,1369.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268151"/>
+        </lane>
+    </edge>
+    <edge id="1312268157" from="12146436506" to="12146436509" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2149.53,1365.34 2147.78,1358.04 2145.48,1351.81 2140.51,1344.86" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268157"/>
+        </lane>
+    </edge>
+    <edge id="1312268158" from="12146436510" to="12146436512" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2330.31,1279.82 2232.79,1254.45 2225.90,1313.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268158"/>
+        </lane>
+    </edge>
+    <edge id="1312268159#0" from="12146436513" to="12146436514" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268159"/>
+        </lane>
+    </edge>
+    <edge id="1312268159#1" from="12146436514" to="7500406459" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1970.94,884.15 1973.64,836.00 1961.02,821.60 1946.83,813.85 1921.91,808.89 1900.37,808.79 1868.44,823.45 1858.52,826.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268159"/>
+        </lane>
+    </edge>
+    <edge id="1312268160#0" from="12146436514" to="12146436522" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1970.94,884.15 1987.26,890.25 2036.79,933.44" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="1312268160#1" from="12146436522" to="12146436535" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2036.79,933.44 2039.82,953.92 2048.48,960.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="1312268160#2" from="12146436535" to="12146436525" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2048.48,960.84 2049.81,961.91 2069.13,974.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="1312268160#3" from="12146436525" to="12146436531" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2069.13,974.25 2052.07,1020.02 2052.21,1030.86 2055.37,1040.46 2063.20,1051.34 2074.60,1061.35 2080.96,1077.36" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268160"/>
+        </lane>
+    </edge>
+    <edge id="1312268161" from="12146436525" to="12146436534" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2069.13,974.25 2116.62,971.61 2127.31,979.48 2178.26,984.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268161"/>
+        </lane>
+    </edge>
+    <edge id="1312268162#0" from="12146436535" to="12146436536" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2048.48,960.84 2054.14,953.44 2061.49,943.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="1312268162#1" from="12146436536" to="12146436617" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2061.49,943.82 2092.07,906.83 2111.33,879.91 2121.58,867.35 2129.45,865.25 2130.95,865.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="1312268162#2" from="12146436617" to="12146436621" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2130.95,865.53 2141.25,867.44 2149.47,869.78 2158.54,878.89 2159.68,881.80" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="1312268162#3" from="12146436621" to="12146436534" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2159.68,881.80 2162.78,889.74 2167.37,902.56 2168.42,908.61 2168.40,913.41 2159.85,942.68 2160.01,948.19 2163.73,954.95 2177.41,973.32 2178.26,984.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268162"/>
+        </lane>
+    </edge>
+    <edge id="1312268163" from="12146436536" to="12146436522" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268163"/>
+        </lane>
+    </edge>
+    <edge id="1312268164" from="12146436534" to="12146436562" name="Ezhukone Panchyat Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2178.26,984.87 2178.07,991.78 2177.81,1001.78 2165.48,1030.81 2157.97,1040.33 2141.14,1054.41 2135.09,1059.48 2096.35,1091.89 2071.61,1107.11 2037.89,1128.77 2027.68,1139.63 2004.15,1154.86 1922.86,1178.87 1896.25,1191.77 1887.90,1195.81" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268164"/>
+        </lane>
+    </edge>
+    <edge id="1312268165" from="12146436569" to="12146436572" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2331.86,792.71 2327.41,825.73 2328.74,845.99 2331.06,849.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268165"/>
+        </lane>
+    </edge>
+    <edge id="1312268166#0" from="12146436379" to="12146436573" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268166"/>
+        </lane>
+    </edge>
+    <edge id="1312268166#1" from="12146436573" to="12146436575" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1643.27,980.79 1636.71,920.28 1651.88,905.58" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268166"/>
+        </lane>
+    </edge>
+    <edge id="1312268167" from="12146436573" to="12146436577" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1643.27,980.79 1644.65,988.77 1641.73,1006.34" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268167"/>
+        </lane>
+    </edge>
+    <edge id="1312268168" from="12146436578" to="12146436581" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1694.90,888.44 1683.22,862.59 1689.38,858.87 1771.79,843.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268168"/>
+        </lane>
+    </edge>
+    <edge id="1312268169" from="12146436582" to="12146436587" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1964.90,517.48 1976.16,529.94 1991.95,558.79 1991.43,592.37 1978.79,620.38 1978.59,623.93" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268169"/>
+        </lane>
+    </edge>
+    <edge id="1312268170" from="12146436595" to="cluster_12146436604_7749951314" name="RPS Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2274.99,132.68 2247.74,155.99 2232.96,190.15 2220.79,195.54 2216.78,212.79 2219.79,250.08 2223.31,288.84 2218.84,316.70 2239.79,349.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268170"/>
+        </lane>
+        <param key="origTo" value="12146436604"/>
+    </edge>
+    <edge id="1312268171#0" from="7749951325" to="12146436614" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2226.97,641.07 2228.70,654.46 2208.17,705.19 2199.99,715.51 2195.51,718.59 2181.82,716.91 2169.66,709.32 2163.84,707.53 2150.80,714.62 2133.29,748.33 2127.59,779.81" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="1312268171#1" from="12146436614" to="12146436615" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="1312268171#2" from="12146436615" to="12146436617" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2130.11,807.62 2132.30,842.79 2130.95,865.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268171"/>
+        </lane>
+    </edge>
+    <edge id="1312268172" from="12146436615" to="12146436621" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2130.11,807.62 2162.63,815.97 2174.16,821.19 2169.71,865.71 2159.68,881.80" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268172"/>
+        </lane>
+    </edge>
+    <edge id="1312268173" from="12146436614" to="12146436622" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1312268173"/>
+        </lane>
+    </edge>
+    <edge id="1314413870" from="12165906020" to="12165906021" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413870"/>
+        </lane>
+    </edge>
+    <edge id="1314413871#0" from="8514866879" to="12165906029" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413871"/>
+        </lane>
+    </edge>
+    <edge id="1314413871#1" from="12165906029" to="12165906025" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="497.86,944.90 453.91,936.36 404.24,933.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413871"/>
+        </lane>
+    </edge>
+    <edge id="1314413872" from="12165906025" to="12165906028" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.24,933.92 458.43,922.61 484.43,908.96 508.14,905.96" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413872"/>
+        </lane>
+    </edge>
+    <edge id="1314413873" from="12165906029" to="12165906038" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="497.86,944.90 498.59,989.76 501.64,1004.86 514.04,1017.28 541.16,1044.09 564.22,1164.80 560.94,1209.17 540.37,1214.68 551.23,1299.50 547.86,1348.79" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413873"/>
+        </lane>
+    </edge>
+    <edge id="1314413874" from="8514866874" to="12165906050" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="640.58,993.82 627.58,1030.70 626.73,1115.98 692.03,1108.73 694.97,1150.49 731.65,1148.44 734.27,1160.44 735.33,1221.75 749.14,1231.58 761.55,1352.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413874"/>
+        </lane>
+    </edge>
+    <edge id="1314413875" from="8853775489" to="12165906052" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413875"/>
+        </lane>
+    </edge>
+    <edge id="1314413876#0" from="8853775491" to="12165906053" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413876"/>
+        </lane>
+    </edge>
+    <edge id="1314413876#1" from="12165906053" to="12165906054" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413876"/>
+        </lane>
+    </edge>
+    <edge id="1314413877" from="12165906053" to="12165906055" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413877"/>
+        </lane>
+    </edge>
+    <edge id="1314413878" from="12165906056" to="12165906060" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="416.93,668.82 350.56,683.29 322.73,708.37 303.20,721.16 198.67,746.47" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413878"/>
+        </lane>
+    </edge>
+    <edge id="1314413879" from="12165906061" to="12165906062" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413879"/>
+        </lane>
+    </edge>
+    <edge id="1314413880" from="6897428811" to="12165906068" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="468.13,359.05 473.85,375.09 475.53,450.84 493.84,447.22 501.21,465.10 510.39,532.12 534.15,523.14" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413880"/>
+        </lane>
+    </edge>
+    <edge id="1314413881" from="12165906069" to="12165906081" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="657.68,118.70 622.49,102.37 580.05,82.69 539.27,50.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413881 1314413882"/>
+        </lane>
+    </edge>
+    <edge id="1314413882#1" from="12165906081" to="12165906071" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="539.27,50.84 535.09,47.58 518.13,34.34 517.69,34.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413882 1314413884 1314413883"/>
+        </lane>
+    </edge>
+    <edge id="1314413883#1" from="12165906071" to="12165906073" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="517.69,34.00 497.67,11.68 484.24,15.18" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413883"/>
+        </lane>
+    </edge>
+    <edge id="1314413885#0" from="7441594161" to="12165906081" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="390.90,108.24 419.38,118.37 450.67,119.41 483.78,112.89 504.43,95.22 539.27,50.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413885"/>
+        </lane>
+    </edge>
+    <edge id="1314413885#1" from="12165906081" to="12165906083" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="539.27,50.84 563.44,0.00 569.25,2.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413885"/>
+        </lane>
+    </edge>
+    <edge id="1314413898" from="12165906143" to="12165906145" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="929.71,352.73 944.03,303.09 948.64,193.41" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413898"/>
+        </lane>
+    </edge>
+    <edge id="1314413899#0" from="12146436395" to="12165906147" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1537.09,1153.88 1523.83,1149.16 1470.42,1153.60" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413899"/>
+        </lane>
+    </edge>
+    <edge id="1314413899#1" from="12165906147" to="12165906153" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1470.42,1153.60 1444.71,1166.08 1428.05,1132.89 1431.42,1105.95 1436.79,1091.91 1438.77,1077.41 1452.29,1057.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413899"/>
+        </lane>
+    </edge>
+    <edge id="1314413901" from="12165906153" to="12165906155" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1452.29,1057.99 1452.10,1036.01 1449.79,1031.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413901 1314413900"/>
+        </lane>
+    </edge>
+    <edge id="1314413902#0" from="12165906153" to="12165906156" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413902"/>
+        </lane>
+    </edge>
+    <edge id="1314413902#1" from="12165906156" to="12165906163" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1452.13,1091.20 1472.59,1084.93 1487.77,1084.02 1518.57,1029.26 1521.75,1014.98 1531.73,919.33 1536.86,864.06 1536.18,842.97" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413902"/>
+        </lane>
+    </edge>
+    <edge id="1314413903" from="12165906156" to="12165906147" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1452.13,1091.20 1455.29,1119.06 1470.42,1153.60" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413903"/>
+        </lane>
+    </edge>
+    <edge id="1314413904" from="12146436395" to="12165906167" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1537.09,1153.88 1542.37,1134.07 1542.94,1082.91 1557.05,1037.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413904"/>
+        </lane>
+    </edge>
+    <edge id="1314413905" from="12146436402" to="12165906169" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1600.55,1253.99 1618.44,1256.46 1652.23,1277.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413905"/>
+        </lane>
+    </edge>
+    <edge id="1314413906" from="12165906170" to="12165906173" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1068.76,361.09 1118.34,362.92 1149.50,358.43 1181.10,343.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413906"/>
+        </lane>
+    </edge>
+    <edge id="1314413907" from="12165906174" to="12165906177" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1153.72,501.18 1175.65,482.15 1173.55,453.72 1204.42,448.53" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="1314413907"/>
+        </lane>
+    </edge>
+    <edge id="240191538#1" from="1051448636" to="3523084980" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="984.23,465.64 1013.91,478.27 1083.61,499.43 1099.05,506.95 1172.50,564.62 1216.09,599.21 1237.21,614.75" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="240191538"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="240191538#2" from="3523084980" to="2579340219" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1237.21,614.75 1276.62,639.80 1311.56,656.90 1373.61,677.25" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="240191538"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="250523005#0" from="2570383494" to="2570383252" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1053.12,1316.18 1086.29,1287.02 1094.07,1263.03 1102.01,1205.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250523005"/>
+        </lane>
+    </edge>
+    <edge id="250523005#1" from="2570383252" to="cluster_2570383468_7494627564" name="Puthoor-Cheerancave Road" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1102.01,1205.05 1125.09,1189.34 1249.88,1184.82 1268.46,1184.14" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250523005"/>
+        </lane>
+        <param key="origTo" value="2570383468"/>
+    </edge>
+    <edge id="250635319#1" from="cluster_2570383468_7494627564" to="8853804378" priority="11" type="highway.secondary" numLanes="1" speed="27.78" shape="1271.02,1196.88 1287.42,1278.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="250635319"/>
+        </lane>
+        <param key="origFrom" value="7494627564"/>
+    </edge>
+    <edge id="251742510#0" from="5684822320" to="7016611730" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1050.07,39.26 1091.99,37.12 1106.00,34.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251742510"/>
+        </lane>
+    </edge>
+    <edge id="251742510#1" from="7016611730" to="7016611728" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1106.00,34.78 1105.48,29.96 1094.79,14.12" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251742510"/>
+        </lane>
+    </edge>
+    <edge id="251750357" from="5974684227" to="7500235953" name="Kollam - Chenkotta" priority="20" type="railway.rail" numLanes="1" speed="44.44" shape="2345.59,479.80 2324.74,484.02 2299.20,490.64 2275.42,497.85 2248.69,508.79 2212.28,525.90 2167.19,550.40 2094.21,595.45 2073.44,608.26 2019.42,640.51 1995.54,654.97 1966.00,671.36 1938.45,683.46 1913.87,692.11 1888.70,698.41 1857.37,704.24 1832.55,706.75 1806.37,708.41 1781.45,708.18 1753.88,706.77 1511.29,678.12 1474.55,673.69 1444.02,667.53 1416.18,661.28 1393.37,655.06 1373.12,648.97 1335.72,635.27 1297.73,617.26 1269.65,601.41 1239.45,581.89 1185.80,540.94 1167.87,526.68 1077.77,455.03 1044.34,431.28 1023.20,418.95 1002.04,408.97 978.33,398.34 952.84,388.29 926.51,381.76 897.52,375.50 861.01,370.15 701.88,355.26 675.16,352.15 648.96,347.88 620.02,341.61 592.63,333.83 517.40,308.93" spreadType="center" allow="rail rail_electric rail_fast">
+        <lane index="0">
+            <param key="origId" value="251750357 251750359 251750360"/>
+        </lane>
+    </edge>
+    <edge id="251750360#1" from="7500235953" to="5349398303" name="Kollam - Chenkotta" priority="20" type="railway.rail" numLanes="1" speed="44.44" shape="517.40,308.93 481.90,297.17 397.49,271.48 289.29,238.57 226.21,218.16 199.55,208.87 177.76,199.71 158.30,190.56 135.39,177.12 117.20,164.76 97.21,150.72 77.44,136.24 56.19,117.70 35.41,95.62" spreadType="center" allow="rail rail_electric rail_fast">
+        <lane index="0">
+            <param key="origId" value="251750360"/>
+        </lane>
+    </edge>
+    <edge id="251750366#0" from="2579340198" to="10207564177" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1383.15,641.13 1393.10,638.16 1422.06,608.91 1453.98,598.50 1480.79,595.51 1550.99,604.23 1647.56,603.96 1731.12,595.24 1791.25,590.01 1846.59,578.75 1870.55,565.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="251750366#1" from="10207564177" to="12146436582" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1870.55,565.25 1912.42,541.64 1964.90,517.48" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="251750366#2" from="12146436582" to="8853240210" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1964.90,517.48 1991.29,505.32 2010.28,492.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="251750366#3" from="8853240210" to="2579340132" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2010.28,492.24 2074.61,447.91 2107.60,411.13 2151.07,366.84" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+    </edge>
+    <edge id="251750366#4" from="2579340132" to="cluster_12146436604_7749951314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2151.07,366.84 2183.22,359.47 2217.60,353.39" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+        <param key="origTo" value="7749951314"/>
+    </edge>
+    <edge id="251750366#6" from="cluster_12146436604_7749951314" to="2579340113" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2239.79,349.06 2300.94,336.95" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750366"/>
+        </lane>
+        <param key="origFrom" value="12146436604"/>
+    </edge>
+    <edge id="251750367" from="2579340132" to="2579339966" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2151.07,366.84 2145.26,361.67 2143.69,356.38 2135.74,329.72 2139.29,295.44 2116.13,240.17 2115.31,208.28 2104.42,163.14 2085.30,121.08 2062.97,95.32 2046.37,83.48 2019.50,47.86 1994.27,21.37" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="251750367 750405608 750405609"/>
+        </lane>
+    </edge>
+    <edge id="290364427#0" from="245582383" to="7441594172" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="90.25,84.57 125.95,116.73 146.90,133.10 166.06,148.09 192.95,155.48 211.72,162.69 226.32,168.30 286.01,191.80 326.28,199.00 365.03,209.30" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="290364427#1" from="7441594172" to="6897428808" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="365.03,209.30 379.08,213.04 483.88,237.19 540.57,254.47" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="290364427#2" from="6897428808" to="5684822309" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="540.57,254.47 565.33,262.01 606.09,271.57" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="290364427#3" from="5684822309" to="345210881" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="606.09,271.57 630.04,277.18 737.21,299.77" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="290364427#4" from="345210881" to="1051448636" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="737.21,299.77 757.78,310.14 779.90,326.33 784.59,330.50 793.79,340.51 829.41,378.14 860.18,407.61 878.41,415.92 929.53,431.92 984.23,465.64" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="290364427 281834392 240191538"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="311264111#0" from="3168617968" to="12146436510" name="Ezhukone - Irumpanangadu Road" priority="3" type="highway.residential" numLanes="1" speed="16.67" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="311264111"/>
+        </lane>
+    </edge>
+    <edge id="311264111#1" from="12146436510" to="3168617970" name="Ezhukone - Irumpanangadu Road" priority="3" type="highway.residential" numLanes="1" speed="16.67" shape="2330.31,1279.82 2327.89,1308.28 2339.08,1360.41" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="311264111"/>
+        </lane>
+    </edge>
+    <edge id="561717020#0" from="5415985132" to="8853777187" name="Karipuram - Checrankavu Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="135.01,1361.12 168.96,1355.72 206.72,1353.84 240.95,1351.95 264.74,1352.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="561717020"/>
+        </lane>
+    </edge>
+    <edge id="561717020#1" from="8853777187" to="5415985127" name="Karipuram - Checrankavu Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="264.74,1352.61 278.40,1353.00 299.59,1362.19" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="561717020"/>
+        </lane>
+    </edge>
+    <edge id="596889246" from="5684822316" to="5684822299" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889246"/>
+        </lane>
+    </edge>
+    <edge id="596889247#0" from="345210881" to="12165906143" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="737.21,299.77 762.25,306.90 770.02,311.32 780.06,315.89 833.52,334.07 923.70,350.90 929.71,352.73" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#1" from="12165906143" to="5684822526" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="929.71,352.73 1013.24,378.27 1030.29,389.77 1045.01,395.42" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#2" from="5684822526" to="12165906170" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1045.01,395.42 1053.60,389.30 1068.76,361.09" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#3" from="12165906170" to="5684822320" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1068.76,361.09 1090.19,321.19 1080.29,294.19 1074.11,228.52 1108.45,202.31 1076.96,123.63 1050.07,39.26" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#4" from="5684822320" to="5684822299" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#5" from="5684822299" to="5684822316" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1029.48,37.04 1003.05,34.19 923.99,32.66 875.91,34.77 798.59,42.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#6" from="5684822316" to="5684822314" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="798.59,42.92 741.34,48.22 709.75,53.65" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#7" from="5684822314" to="12165906069" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="709.75,53.65 677.72,93.05 657.68,118.70" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="596889247#8" from="12165906069" to="5684822309" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="657.68,118.70 653.98,123.42 636.33,175.79 616.92,227.86 606.09,271.57" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="596889247"/>
+        </lane>
+    </edge>
+    <edge id="620945896#0" from="2579340219" to="12146436364" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1373.61,677.25 1396.57,682.77 1465.35,690.50 1529.41,714.48 1557.50,718.10 1584.47,715.68" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945896#1" from="12146436364" to="12146436374" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1584.47,715.68 1637.00,710.96 1690.17,713.82 1751.20,725.04 1773.30,730.16" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945896#2" from="12146436374" to="2479468029" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1773.30,730.16 1789.81,734.00 1820.71,742.54 1840.86,745.98" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945896#3" from="2479468029" to="7749951325" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="1840.86,745.98 1856.53,743.21 1940.61,711.81 2039.00,681.04 2110.61,660.52 2147.33,650.00 2192.65,641.76 2226.97,641.07" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945896#4" from="7749951325" to="7500406402" priority="13" type="highway.trunk" numLanes="1" speed="19.44" shape="2226.97,641.07 2232.69,640.95 2262.30,648.27 2280.28,656.02" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945896#5" from="7500406402" to="7500339350" priority="13" type="highway.trunk" numLanes="1" speed="19.44" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945896"/>
+        </lane>
+        <param key="ref" value="NH744"/>
+    </edge>
+    <edge id="620945897#0" from="2579340198" to="12165906174" name="esi road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1383.15,641.13 1360.46,634.80 1327.49,621.75 1279.82,597.50 1246.89,575.07 1203.38,542.06 1178.68,524.94 1157.55,504.34 1153.72,501.18" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945897"/>
+        </lane>
+    </edge>
+    <edge id="620945897#1" from="12165906174" to="5684822526" name="esi road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1153.72,501.18 1131.10,482.52 1111.72,464.86 1092.92,446.60 1068.83,427.74 1053.84,414.47 1047.11,404.19 1045.01,395.42" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="620945897"/>
+        </lane>
+    </edge>
+    <edge id="736702743#0" from="6897428808" to="7500235953" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="736702743#1" from="7500235953" to="6897428809" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="736702743#2" from="6897428809" to="6897428811" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="505.10,337.83 480.87,347.10 468.13,359.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="736702743#3" from="6897428811" to="6897428812" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="468.13,359.05 424.19,358.55 381.12,358.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743"/>
+        </lane>
+    </edge>
+    <edge id="736702743#4" from="6897428812" to="6897428814" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="381.12,358.06 378.36,379.58 376.77,405.80 374.11,454.05 374.56,478.18 379.14,501.74 388.26,545.85" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702743 736702744"/>
+        </lane>
+    </edge>
+    <edge id="736702745" from="6897428814" to="7564569545" name="to plavila puthen veedu" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="388.26,545.85 357.34,562.06 342.17,569.59 325.25,574.17" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="736702745"/>
+        </lane>
+    </edge>
+    <edge id="757219356#0" from="7016611698" to="12165906071" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="532.06,7.77 525.25,24.86 517.69,34.00" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="757219356#1" from="12165906071" to="7441594088" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="517.69,34.00 503.87,50.71 489.23,70.43 474.16,85.27 457.54,96.01 439.57,100.86 422.92,101.88 404.62,96.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="757219356#2" from="7441594088" to="7016592083" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.62,96.06 400.53,94.37 381.78,81.84 325.08,64.35 297.63,61.22 272.66,51.67 255.89,45.90 247.84,41.50 222.34,26.13 197.66,4.08" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="757219356"/>
+        </lane>
+    </edge>
+    <edge id="795605759#1" from="7441594161" to="7441594172" name="canal road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="390.90,108.24 384.85,115.50 379.37,123.47 376.81,129.20 373.91,138.77 369.66,149.31 368.01,156.60 365.35,163.02 364.94,168.93 363.97,174.15 362.45,181.75 361.53,189.41 361.06,197.84 365.03,209.30" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="795605759"/>
+        </lane>
+    </edge>
+    <edge id="801313288" from="7494442941" to="6897428812" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="8.85,217.53 22.97,223.46 36.50,231.71 50.60,244.68 62.95,253.53 69.68,257.26 79.69,261.70 88.83,265.26 98.84,269.11 107.08,272.08 116.80,276.23 123.26,281.25 130.02,287.43 137.66,293.03 145.59,298.93 168.83,311.93 175.60,315.77 251.98,343.37 262.00,345.76 272.89,348.16 284.39,349.97 381.12,358.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801313288 801313289 801313290"/>
+        </lane>
+    </edge>
+    <edge id="801336201#0" from="2579340219" to="12165906155" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1373.61,677.25 1373.80,697.22 1381.99,713.67 1386.64,726.58 1392.47,743.02 1400.06,760.64 1408.82,780.61 1415.22,799.39 1418.67,811.90 1423.03,823.35 1425.05,834.79 1425.32,847.79 1427.02,860.69 1432.27,873.02 1433.40,885.33 1433.33,899.40 1433.23,922.25 1438.46,936.48 1446.08,948.81 1448.97,961.72 1449.50,974.04 1449.43,991.02 1452.88,1008.04 1451.64,1019.76 1449.79,1031.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801336201"/>
+        </lane>
+    </edge>
+    <edge id="801336201#1" from="12165906155" to="cluster_2570383468_7494627564" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1449.79,1031.61 1448.61,1039.08 1439.13,1047.83 1431.40,1058.93 1424.29,1068.28 1414.74,1091.25 1412.29,1111.76 1413.38,1130.51 1416.85,1144.01 1419.73,1159.25 1432.63,1175.73 1449.11,1184.01 1434.38,1198.88 1419.60,1205.85 1399.53,1209.27 1381.24,1208.60 1359.45,1204.80 1341.75,1205.89 1324.07,1204.63 1304.03,1200.43 1283.98,1198.58 1271.02,1196.88" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801336201 801337280 801337281"/>
+        </lane>
+        <param key="origTo" value="7494627564"/>
+    </edge>
+    <edge id="801875603#0" from="7500406402" to="7500406415" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2280.28,656.02 2298.19,677.55 2304.32,698.96 2296.26,728.75 2280.27,755.68 2265.44,778.12 2259.62,810.17 2261.74,840.00 2259.85,882.20 2263.73,901.92 2254.03,915.38 2244.31,935.58 2252.70,957.57 2254.33,971.08" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#1" from="7500406415" to="9928852202" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2254.33,971.08 2248.01,991.88 2242.26,1010.98 2242.10,1014.67" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#2" from="9928852202" to="7500406439" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2242.10,1014.67 2240.99,1039.67 2226.13,1068.87 2215.81,1093.57 2198.27,1091.81 2174.99,1102.95 2158.54,1107.38 2147.16,1118.02 2143.17,1124.18 2128.98,1131.44 2114.77,1141.50 2101.11,1154.94 2083.49,1168.93 2063.00,1189.09 2049.89,1207.60 2028.90,1213.13 2010.18,1220.35 1986.32,1233.75 1972.12,1244.94 1947.17,1248.76 1930.74,1249.25 1906.37,1253.64 1891.63,1255.25" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#3" from="7500406439" to="12146436562" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1891.63,1255.25 1888.28,1245.10 1888.95,1223.72 1889.63,1198.97 1887.90,1195.81" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#4" from="12146436562" to="12146436513" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1887.90,1195.81 1880.08,1181.49 1873.92,1166.26 1858.76,1138.05 1856.01,1120.60 1839.69,1098.01 1829.01,1081.08 1840.44,1058.63 1859.20,1043.52 1874.55,1031.21 1872.50,986.19 1868.06,966.47 1864.82,932.68 1861.04,919.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#5" from="12146436513" to="7500406459" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1861.04,919.77 1853.11,892.68 1846.43,867.33 1844.33,850.36 1843.15,840.87 1846.59,832.43 1858.52,826.87" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="801875603#6" from="7500406459" to="2479468029" name="Kallupuram- Moozhi Road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1858.52,826.87 1860.55,806.77 1856.66,782.47 1853.98,755.80 1840.86,745.98" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="801875603"/>
+        </lane>
+    </edge>
+    <edge id="809006623" from="2579340219" to="2579340198" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1373.61,677.25 1378.51,661.39 1383.15,641.13" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="809006623"/>
+        </lane>
+    </edge>
+    <edge id="830270079" from="cluster_12146436604_7749951314" to="7749951327" name="Ezhukone THS Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2217.60,353.39 2221.80,371.81 2236.41,389.08 2239.34,405.93 2243.39,425.77 2259.11,446.79 2277.84,465.57" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270079"/>
+        </lane>
+        <param key="origFrom" value="7749951314"/>
+    </edge>
+    <edge id="830270080" from="7749951326" to="7749951325" name="Ezhukone THS Road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2292.23,528.85 2277.41,557.21 2269.44,563.84 2255.49,575.43 2243.01,587.34 2234.27,605.25 2224.77,624.65 2226.97,641.07" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270080"/>
+        </lane>
+    </edge>
+    <edge id="830270081" from="7749951327" to="7749951326" name="Polytechni School road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="830270081"/>
+        </lane>
+    </edge>
+    <edge id="854277421" from="7441594088" to="7441594161" name="canal road" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="404.62,96.06 395.34,104.37 390.90,108.24" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="854277421 795605759"/>
+        </lane>
+    </edge>
+    <edge id="916761965#0" from="8514867161" to="8853763394" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="950.79,1363.21 944.11,1344.16 939.91,1318.66 934.36,1310.49 928.85,1303.97 927.40,1292.46 926.23,1275.47 925.78,1262.73 924.83,1250.23 925.15,1234.50 930.01,1218.52 922.47,1218.25 900.33,1218.14 882.23,1218.56 866.42,1211.48 855.68,1194.20 847.24,1170.92 837.76,1153.39 827.01,1139.59 819.90,1130.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="916761965#1" from="8853763394" to="12146414362" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="819.90,1130.68 816.01,1125.80 800.99,1110.00 785.75,1088.43 775.49,1076.64 762.48,1063.59 747.42,1057.23" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="916761965#2" from="12146414362" to="8514866874" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="747.42,1057.23 745.16,1056.27 728.12,1043.95 713.07,1035.63 688.95,1029.02 671.90,1019.20 665.15,1011.42 640.58,993.82" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="916761965#3" from="8514866874" to="8514866879" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" shape="640.58,993.82 602.46,969.91 591.94,962.36 580.42,950.82 570.35,952.77 562.53,957.48" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="916761965#4" from="8514866879" to="8514866880" name="Mukkoodu Road" priority="3" type="highway.residential" numLanes="1" speed="8.33" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761965"/>
+        </lane>
+    </edge>
+    <edge id="916761966" from="8514866897" to="8514866898" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761966"/>
+        </lane>
+    </edge>
+    <edge id="916761967" from="8514866915" to="8853777187" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1.07,916.50 10.42,915.57 21.33,914.07 30.48,913.54 36.89,915.69 40.76,919.97 56.34,917.33 67.24,916.22 75.81,916.07 82.44,911.46 90.06,907.24 96.08,907.27 102.29,910.39 109.90,908.11 114.97,907.16 122.94,907.01 127.64,901.22 136.19,902.43 149.02,905.00 158.94,906.79 165.74,908.56 174.09,912.08 180.51,914.62 182.81,921.79 180.05,929.31 170.04,955.13 164.67,992.15 163.32,1030.34 163.68,1055.66 175.76,1092.99 189.01,1136.42 202.72,1181.97 204.71,1212.93 204.43,1222.54 231.31,1226.41 235.84,1266.28 237.18,1282.23 257.72,1280.45 264.74,1352.61" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="916761967 956668902"/>
+        </lane>
+    </edge>
+    <edge id="923060265#0" from="8568746957" to="8853775506" name="Mukkoodu Ground road" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="923060265"/>
+        </lane>
+    </edge>
+    <edge id="923060265#1" from="8853775506" to="8568746960" name="Mukkoodu Ground road" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="411.27,1093.27 414.28,1087.23 428.60,1052.84 427.08,1009.00 426.81,1001.06" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="923060265"/>
+        </lane>
+    </edge>
+    <edge id="956553914" from="5684822314" to="8852704957" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956553914"/>
+        </lane>
+    </edge>
+    <edge id="956554408#1" from="12146414307" to="10207564179" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1344.33,250.50 1348.36,250.63 1368.81,267.37 1401.38,265.18 1417.18,269.70 1424.87,290.60 1441.15,290.68 1457.94,283.02 1520.43,290.57 1591.19,299.59 1648.70,310.16 1717.68,345.41 1796.41,361.02 1807.44,374.90 1852.24,383.78 1855.72,383.93" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554408"/>
+        </lane>
+    </edge>
+    <edge id="956554408#2" from="10207564179" to="8852708571" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554408"/>
+        </lane>
+    </edge>
+    <edge id="956554409" from="7016611730" to="12146414307" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1106.00,34.78 1120.09,66.00 1134.28,111.55 1144.46,153.09 1162.66,199.83 1189.35,243.32 1204.67,249.02 1262.48,247.88 1305.92,249.27 1319.81,249.71 1344.33,250.50" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956554409 956554410 956554408"/>
+        </lane>
+    </edge>
+    <edge id="956615114#0" from="8853240210" to="8852708571" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="2010.28,492.24 1992.47,456.15 1955.97,440.04 1948.50,387.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956615114"/>
+        </lane>
+    </edge>
+    <edge id="956615114#1" from="8852708571" to="8853274024" priority="4" type="highway.unclassified" numLanes="1" speed="13.89" shape="1948.50,387.99 1945.59,357.58 1944.73,348.50 1942.81,328.39 1933.13,280.06 1977.13,257.52 1951.16,208.63 1931.82,205.27 1904.13,171.85 1894.06,158.44 1865.04,105.79 1851.49,74.08 1849.67,62.82 1859.45,39.88 1881.10,1.78" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956615114 956615115 956615113"/>
+        </lane>
+    </edge>
+    <edge id="956669866#0" from="6897428814" to="12165906061" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="388.26,545.85 397.57,584.63 410.59,627.11 412.13,637.19" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956669866#1" from="12165906061" to="12165906056" priority="3" type="highway.residential" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956669866#2" from="12165906056" to="8853775489" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="416.93,668.82 418.83,681.31 428.36,714.40 443.83,734.40 464.49,756.99" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956669866#3" from="8853775489" to="8853775491" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="464.49,756.99 476.45,774.40 473.10,782.60" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956669866#4" from="8853775491" to="12165906025" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="473.10,782.60 442.63,790.19 411.22,795.67 415.01,842.81 404.12,852.60 404.16,895.26 404.24,933.92" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956669866#5" from="12165906025" to="8853775506" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="404.24,933.92 404.30,963.71 398.84,973.78 395.71,985.72 393.72,1007.03 392.21,1030.23 383.39,1048.24 376.69,1069.32 380.88,1079.41 405.85,1091.02 411.27,1093.27" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956669866"/>
+        </lane>
+    </edge>
+    <edge id="956670123#0" from="8853763394" to="8853756715" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="819.90,1130.68 836.55,1125.60 843.66,1120.24 845.62,1105.02 861.70,1097.35 898.31,1089.55 913.51,1088.07" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="956670123#1" from="8853756715" to="12146436355" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="913.51,1088.07 943.87,1085.08 958.77,1084.59" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="956670123#2" from="12146436355" to="2570383252" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="958.77,1084.59 981.63,1083.85 996.26,1084.84 999.92,1108.77 1024.38,1127.41 1065.75,1159.95 1093.70,1189.62 1102.01,1205.05" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670123"/>
+        </lane>
+    </edge>
+    <edge id="956670654#0" from="8853756715" to="8853802823" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="913.51,1088.07 912.44,1044.37 895.69,1044.06 887.20,1043.31 870.31,1021.68 836.03,985.17 843.16,973.25 838.50,961.75 795.69,931.77" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670654"/>
+        </lane>
+    </edge>
+    <edge id="956670654#1" from="8853802823" to="8853802826" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="795.69,931.77 814.78,884.98 838.84,888.61 845.94,883.02" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670654"/>
+        </lane>
+    </edge>
+    <edge id="956670966" from="3168617968" to="9928852202" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="2338.98,1177.69 2334.67,1132.11 2327.76,1097.63 2327.48,1056.13 2334.17,1037.64 2242.10,1014.67" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956670966 1083437762"/>
+        </lane>
+    </edge>
+    <edge id="956671340" from="8853804372" to="8853804378" priority="3" type="highway.residential" numLanes="1" speed="13.89" shape="1356.95,1359.40 1364.10,1344.66 1361.59,1326.59 1362.44,1294.49 1353.52,1286.24 1324.75,1281.42 1287.42,1278.68" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone">
+        <lane index="0">
+            <param key="origId" value="956671340"/>
+        </lane>
+    </edge>
+</edges>

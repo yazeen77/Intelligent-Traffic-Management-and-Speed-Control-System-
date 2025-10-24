@@ -1,0 +1,49 @@
+<!-- save as templates/dashboard.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ITS Phase1 Dashboard</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; margin:20px}
+    table{border-collapse:collapse; width:100%}
+    th,td{border:1px solid #ddd; padding:8px}
+    th{background:#f2f2f2}
+    .status{font-weight:bold}
+  </style>
+</head>
+<body>
+  <h2>Phase-1 Live Decisions</h2>
+  <div id="lastUpdate">Waiting for data...</div>
+  <table id="logTable">
+    <thead><tr><th>Time</th><th>Action</th><th>Payload</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+<script>
+async function fetchLatest(){
+  try{
+    const res = await fetch('/latest');
+    const rows = await res.json();
+    const tbody = document.querySelector('#logTable tbody');
+    tbody.innerHTML = '';
+    if(Array.isArray(rows) && rows.length){
+      rows.reverse().forEach(r=>{
+        // CSV row format: [ts, action, payload]
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${r[0]||''}</td><td>${r[1]||''}</td><td><pre style="white-space:pre-wrap">${r[2]||''}</pre></td>`;
+        tbody.appendChild(tr);
+      });
+      document.getElementById('lastUpdate').innerText = 'Last update: ' + rows[rows.length-1][0];
+    } else {
+      document.getElementById('lastUpdate').innerText = 'No log entries yet.';
+    }
+  }catch(e){
+    document.getElementById('lastUpdate').innerText = 'Error: ' + e.message;
+  }
+}
+setInterval(fetchLatest, 2000);
+fetchLatest();
+</script>
+</body>
+</html>
