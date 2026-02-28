@@ -1,48 +1,113 @@
-<!-- save as templates/dashboard.html -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ITS Phase1 Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V2I Smart City Control Hub</title>
   <style>
-    body{font-family: Arial, Helvetica, sans-serif; margin:20px}
-    table{border-collapse:collapse; width:100%}
-    th,td{border:1px solid #ddd; padding:8px}
-    th{background:#f2f2f2}
-    .status{font-weight:bold}
+    body { font-family: 'Segoe UI', sans-serif; margin: 20px; background-color: #f0f2f5; color: #1c1e21; }
+    .control-panel { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 20px; border-top: 5px solid #3498db; }
+    .control-group { flex: 1; min-width: 250px; padding: 10px; border: 1px solid #e1e4e8; border-radius: 8px; }
+    h3 { margin-top: 0; color: #2c3e50; font-size: 1.1em; }
+    button { padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-right: 5px; color: white; }
+    .btn-danger { background: #e74c3c; } .btn-safe { background: #2ecc71; }
+    input[type=range] { width: 100%; margin: 15px 0; }
+    
+    /* INTERSECTION CSS */
+    .intersection-container { display: grid; grid-template-columns: 100px 150px 100px; grid-template-rows: 100px 150px 100px; gap: 10px; justify-content: center; margin-bottom: 30px; background: #ecf0f1; padding: 20px; border-radius: 10px; }
+    .arm { background: white; border: 2px solid #bdc3c7; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em;}
+    .center-box { grid-column: 2; grid-row: 2; background: #34495e; border-radius: 8px;}
+    .arm-north { grid-column: 2; grid-row: 1; border-top: 6px solid #3498db;}
+    .arm-south { grid-column: 2; grid-row: 3; }
+    .arm-east  { grid-column: 3; grid-row: 2; }
+    .arm-west  { grid-column: 1; grid-row: 2; }
+    .light { width: 20px; height: 20px; border-radius: 50%; background: #7f8c8d; margin-top: 5px; }
+    .light.RED { background: #e74c3c; box-shadow: 0 0 10px #e74c3c;}
+    .light.GREEN { background: #2ecc71; box-shadow: 0 0 10px #2ecc71;}
+    .light.YELLOW { background: #f1c40f; box-shadow: 0 0 10px #f1c40f;}
+    .queue-badge { background: #2c3e50; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-top: 5px; }
+
+    table { border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    th { background-color: #34495e; color: white; padding: 12px; text-transform: uppercase; font-size: 0.8em; text-align: left; }
+    td { padding: 12px; border-bottom: 1px solid #eee; }
+    pre { margin: 0; font-family: monospace; font-size: 0.85em; }
   </style>
 </head>
 <body>
-  <h2>Phase-1 Live Decisions</h2>
-  <div id="lastUpdate">Waiting for data...</div>
+
+  <h2>🚦 V2I Infrastructure Control Hub</h2>
+  
+  <div class="control-panel">
+    <div class="control-group">
+      <h3>🛡️ System 3: Speed Limiter Zones</h3>
+      <button class="btn-danger" onclick="setSafety(true)">Flag Dangerous Zone</button>
+      <button class="btn-safe" onclick="setSafety(false)">Clear Area Flag</button>
+    </div>
+    <div class="control-group">
+      <h3>📉 System 3: Dynamic Leeway</h3>
+      <input type="range" id="speedSlider" min="40" max="255" value="255" oninput="updateLimiter(this.value)">
+      <div id="speedVal">Current Limit: 255 PWM</div>
+    </div>
+    <div class="control-group">
+      <h3>🚑 System 2: Emergency Priority</h3>
+      <input type="range" id="ambSlider" min="0" max="1000" value="1000" oninput="updateAmbulance(this.value)">
+      <div id="ambVal">Ambulance Distance: 1000m</div>
+    </div>
+  </div>
+
+  <div class="intersection-container">
+    <div class="arm arm-north" id="arm-North">NORTH (Live ESP32)<div class="light"></div><div class="queue-badge">Q: 0</div></div>
+    <div class="arm arm-west" id="arm-West">WEST (Simulated)<div class="light"></div><div class="queue-badge">Q: 2</div></div>
+    <div class="center-box"></div>
+    <div class="arm arm-east" id="arm-East">EAST (Simulated)<div class="light"></div><div class="queue-badge">Q: 1</div></div>
+    <div class="arm arm-south" id="arm-South">SOUTH (Simulated)<div class="light"></div><div class="queue-badge">Q: 0</div></div>
+  </div>
+
+  <h3>System Audit Logs</h3>
   <table id="logTable">
-    <thead><tr><th>Time</th><th>Action</th><th>Payload</th></tr></thead>
+    <thead><tr><th>Timestamp</th><th>Decision Target</th><th>Payload Data</th></tr></thead>
     <tbody></tbody>
   </table>
 
 <script>
+async function setSafety(isDanger) { await fetch(`/toggle_danger?state=${isDanger}`); }
+async function updateLimiter(val) { document.getElementById('speedVal').innerText = `Current Limit: ${val} PWM`; await fetch(`/set_limiter?val=${val}`); }
+async function updateAmbulance(val) { document.getElementById('ambVal').innerText = `Ambulance Distance: ${val}m`; await fetch(`/ambulance?dist=${val}`); }
+
+async function fetchIntersection() {
+    try {
+        const res = await fetch('/intersection_data');
+        const state = await res.json();
+        ['North', 'East', 'South', 'West'].forEach(armName => {
+            const armDiv = document.getElementById(`arm-${armName}`);
+            armDiv.querySelector('.queue-badge').innerText = `Q: ${state.queues[armName]}`;
+            const lightDiv = armDiv.querySelector('.light');
+            lightDiv.className = 'light';
+            if (state.active_arm === armName) lightDiv.classList.add(state.color);
+            else lightDiv.classList.add('RED');
+        });
+    } catch(e) {}
+}
+
 async function fetchLatest(){
   try{
     const res = await fetch('/latest');
     const rows = await res.json();
     const tbody = document.querySelector('#logTable tbody');
     tbody.innerHTML = '';
-    if(Array.isArray(rows) && rows.length){
-      rows.reverse().forEach(r=>{
-        // CSV row format: [ts, action, payload]
+    if(Array.isArray(rows) && rows.length > 0){
+      rows.reverse().forEach(r => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r[0]||''}</td><td>${r[1]||''}</td><td><pre style="white-space:pre-wrap">${r[2]||''}</pre></td>`;
+        tr.innerHTML = `<td>${r[0] || ''}</td><td><strong>${r[1] || ''}</strong></td><td><pre>${r[2] || ''}</pre></td>`;
         tbody.appendChild(tr);
       });
-      document.getElementById('lastUpdate').innerText = 'Last update: ' + rows[rows.length-1][0];
-    } else {
-      document.getElementById('lastUpdate').innerText = 'No log entries yet.';
     }
-  }catch(e){
-    document.getElementById('lastUpdate').innerText = 'Error: ' + e.message;
-  }
+  } catch(e){}
 }
-setInterval(fetchLatest, 2000);
+
+setInterval(fetchIntersection, 300); // Fast UI response for lights
+setInterval(fetchLatest, 1000);
+fetchIntersection();
 fetchLatest();
 </script>
 </body>
