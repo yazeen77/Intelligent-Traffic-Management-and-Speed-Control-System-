@@ -3,10 +3,12 @@ import paho.mqtt.client as mqtt
 import json
 import csv
 import os
+import sys
 
 app = Flask(__name__)
 AUDIT_FILE = "audit_log.csv"
-MQTT_BROKER = "localhost"
+MQTT_BROKER = os.getenv("MQTT_BROKER", "localhost")
+MQTT_PORT = int(os.getenv("MQTT_PORT", "1883"))
 
 # Global state to hold the intersection data
 intersection_state = {
@@ -23,7 +25,14 @@ def on_message(client, userdata, msg):
 
 client = mqtt.Client()
 client.on_message = on_message
-client.connect(MQTT_BROKER, 1883)
+try:
+    client.connect(MQTT_BROKER, MQTT_PORT)
+except ConnectionRefusedError:
+    print(
+        f"Cannot connect to MQTT broker at {MQTT_BROKER}:{MQTT_PORT}. "
+        "Start Mosquitto first, or set MQTT_BROKER to the broker machine."
+    )
+    sys.exit(1)
 client.subscribe("city/dashboard/state")
 client.loop_start()
 
@@ -49,6 +58,13 @@ def get_intersection_data():
 @app.route('/set_limiter')
 def set_limiter():
     client.publish("city/settings", json.dumps({"manual_limit": int(request.args.get('val', 255))}))
+    return jsonify({"status": "Sent"})
+
+@app.route('/update_queue')
+def update_queue():
+    arm = request.args.get('arm')
+    change = int(request.args.get('change', 0))
+    client.publish("city/settings", json.dumps({"queue_update": {"arm": arm, "change": change}}))
     return jsonify({"status": "Sent"})
 
 @app.route('/toggle_danger')
