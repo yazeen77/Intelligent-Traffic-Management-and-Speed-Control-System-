@@ -1,114 +1,885 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>V2I Smart City Control Hub</title>
+  <title>SignalSync - V2I Hub</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 20px; background-color: #f0f2f5; color: #1c1e21; }
-    .control-panel { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 20px; border-top: 5px solid #3498db; }
-    .control-group { flex: 1; min-width: 250px; padding: 10px; border: 1px solid #e1e4e8; border-radius: 8px; }
-    h3 { margin-top: 0; color: #2c3e50; font-size: 1.1em; }
-    button { padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-right: 5px; color: white; }
-    .btn-danger { background: #e74c3c; } .btn-safe { background: #2ecc71; }
-    input[type=range] { width: 100%; margin: 15px 0; }
-    
-    /* INTERSECTION CSS */
-    .intersection-container { display: grid; grid-template-columns: 100px 150px 100px; grid-template-rows: 100px 150px 100px; gap: 10px; justify-content: center; margin-bottom: 30px; background: #ecf0f1; padding: 20px; border-radius: 10px; }
-    .arm { background: white; border: 2px solid #bdc3c7; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em;}
-    .center-box { grid-column: 2; grid-row: 2; background: #34495e; border-radius: 8px;}
-    .arm-north { grid-column: 2; grid-row: 1; border-top: 6px solid #3498db;}
-    .arm-south { grid-column: 2; grid-row: 3; }
-    .arm-east  { grid-column: 3; grid-row: 2; }
-    .arm-west  { grid-column: 1; grid-row: 2; }
-    .light { width: 20px; height: 20px; border-radius: 50%; background: #7f8c8d; margin-top: 5px; }
-    .light.RED { background: #e74c3c; box-shadow: 0 0 10px #e74c3c;}
-    .light.GREEN { background: #2ecc71; box-shadow: 0 0 10px #2ecc71;}
-    .light.YELLOW { background: #f1c40f; box-shadow: 0 0 10px #f1c40f;}
-    .queue-badge { background: #2c3e50; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-top: 5px; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
-    table { border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    th { background-color: #34495e; color: white; padding: 12px; text-transform: uppercase; font-size: 0.8em; text-align: left; }
-    td { padding: 12px; border-bottom: 1px solid #eee; }
-    pre { margin: 0; font-family: monospace; font-size: 0.85em; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #0B1321;
+      color: #f8fafc;
+      padding: 40px 20px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .radar-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .scan-line {
+      position: absolute;
+      top: 0;
+      left: -20vw;
+      width: 20vw;
+      height: 100vh;
+      background: linear-gradient(to right, transparent 0%, rgba(160, 214, 180, 0.02) 80%, rgba(160, 214, 180, 0.15) 100%);
+      animation: scanRight 20s linear infinite;
+    }
+
+    @keyframes scanRight {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(140vw);
+      }
+    }
+
+    .ambient-dot {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #0040FF;
+      box-shadow: 0 0 10px 3px rgba(0, 64, 255, 0.8);
+      opacity: 0;
+      animation: pulseDot 12s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+      }
+    }
+
+    .ambient-dot:nth-child(2) {
+      top: 8%;
+      left: 8%;
+      animation-delay: 2s;
+    }
+
+    .ambient-dot:nth-child(3) {
+      top: 12%;
+      right: 10%;
+      animation-delay: 8s;
+    }
+
+    .ambient-dot:nth-child(4) {
+      bottom: 15%;
+      left: 12%;
+      animation-delay: 5s;
+    }
+
+    .ambient-dot:nth-child(5) {
+      bottom: 8%;
+      right: 8%;
+      animation-delay: 11s;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3.5em;
+      font-weight: 800;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    .main-layout {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .side-panel {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 4px solid #38bdf8;
+      flex: 1;
+      min-width: 280px;
+      max-width: 380px;
+    }
+
+    .control-group {
+      background: rgba(15, 23, 42, 0.6);
+      flex: 1;
+      min-width: 280px;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .control-group:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), inset 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #e2e8f0;
+      font-size: 1.15em;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    .btn-danger {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+    }
+
+    .btn-safe {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      margin-left: 10px;
+    }
+
+    .btn-amb-on {
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      color: white;
+      width: 100%;
+      margin-bottom: 15px;
+      animation: pulseRed 1.5s infinite;
+    }
+
+    .btn-amb-off {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @keyframes pulseRed {
+      0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+      }
+    }
+
+    input[type=range] {
+      width: 100%;
+      margin: 10px 0;
+      accent-color: #38bdf8;
+    }
+
+    .val-display {
+      font-size: 0.9em;
+      color: #94a3b8;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* INTERSECTION CSS BIRD'S EYE VIEW */
+    .intersection-wrapper {
+      position: relative;
+      min-width: 600px;
+      max-width: 600px;
+      width: 600px;
+      height: 600px;
+      margin: 0;
+      background-color: #0b1121;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), inset 0 0 60px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .road-vertical {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 100%;
+      background: #334155;
+      border-left: 4px solid #64748b;
+      border-right: 4px solid #64748b;
+    }
+
+    .road-vertical::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: repeating-linear-gradient(to bottom, #fde047 0, #fde047 30px, transparent 30px, transparent 60px);
+    }
+
+    .road-horizontal {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 140px;
+      background: #334155;
+      border-top: 4px solid #64748b;
+      border-bottom: 4px solid #64748b;
+    }
+
+    .road-horizontal::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 4px;
+      background: repeating-linear-gradient(to right, #fde047 0, #fde047 30px, transparent 30px, transparent 60px);
+    }
+
+    .intersection-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      background: #334155;
+      z-index: 2;
+    }
+
+    .intersection-center::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #334155;
+      z-index: 3;
+    }
+
+    .stop-line {
+      position: absolute;
+      background: white;
+      z-index: 4;
+    }
+
+    .stop-north {
+      width: 66px;
+      height: 8px;
+      top: -8px;
+      right: 0;
+    }
+
+    .stop-south {
+      width: 66px;
+      height: 8px;
+      bottom: -8px;
+      left: 0;
+    }
+
+    .stop-east {
+      width: 8px;
+      height: 66px;
+      right: -8px;
+      bottom: 0;
+    }
+
+    .stop-west {
+      width: 8px;
+      height: 66px;
+      left: -8px;
+      top: 0;
+    }
+
+    /* LANE LAYOUTS FOR CAR QUEUES */
+    .lane {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .lane-north {
+      top: 0;
+      left: 50%;
+      width: 70px;
+      height: 230px;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 12px;
+      gap: 2px;
+    }
+
+    .lane-south {
+      bottom: 0;
+      right: 50%;
+      width: 70px;
+      height: 230px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 12px;
+      gap: 2px;
+    }
+
+    .lane-east {
+      top: 50%;
+      right: 0;
+      width: 230px;
+      height: 70px;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 12px;
+      gap: 2px;
+    }
+
+    .lane-west {
+      bottom: 50%;
+      left: 0;
+      width: 230px;
+      height: 70px;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 12px;
+      gap: 2px;
+    }
+
+    /* CAR ANIMATION SETTINGS: */
+    /* To edit how fast the cars blink/fade into the lanes, change the "0.6s" value below to something faster ("0.3s") or slower ("1.0s"): */
+    .sim-car-wrapper {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: popin 0.4s ease-out;
+    }
+
+    .sim-car {
+      width: 22px;
+      height: 34px;
+      background: #ef4444;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .sim-car::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 2px;
+      right: 2px;
+      height: 6px;
+      background: #0f172a;
+      border-radius: 2px;
+      opacity: 0.75;
+    }
+
+    .sim-car::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 2px;
+      right: 2px;
+      height: 4px;
+      background: #0f172a;
+      border-radius: 2px;
+      opacity: 0.75;
+    }
+
+    @keyframes popin {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .lane-north .sim-car {
+      transform: rotate(180deg);
+    }
+
+    .lane-south .sim-car {
+      transform: rotate(0deg);
+    }
+
+    .lane-east .sim-car {
+      transform: rotate(-90deg);
+    }
+
+    .lane-west .sim-car {
+      transform: rotate(90deg);
+    }
+
+    .arm {
+      position: absolute;
+      background: rgba(15, 23, 42, 0.95);
+      border: 2px solid #38bdf8;
+      padding: 12px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      min-width: 90px;
+    }
+
+    .arm-north {
+      top: 30px;
+      left: calc(50% + 90px);
+      border-top: 5px solid #38bdf8;
+    }
+
+    .arm-south {
+      bottom: 30px;
+      right: calc(50% + 90px);
+      border-bottom: 5px solid #38bdf8;
+    }
+
+    .arm-east {
+      top: calc(50% + 90px);
+      right: 30px;
+      border-right: 5px solid #38bdf8;
+    }
+
+    .arm-west {
+      bottom: calc(50% + 90px);
+      left: 30px;
+      border-left: 5px solid #38bdf8;
+    }
+
+    .arm-title {
+      font-size: 0.75em;
+      color: #cbd5e1;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .light {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #1e293b;
+      margin-bottom: 8px;
+      border: 3px solid #0f172a;
+      transition: all 0.3s;
+    }
+
+    .light.RED {
+      background: #ef4444;
+      box-shadow: 0 0 20px #ef4444;
+    }
+
+    .light.GREEN {
+      background: #10b981;
+      box-shadow: 0 0 20px #10b981;
+    }
+
+    .light.YELLOW {
+      background: #f59e0b;
+      box-shadow: 0 0 20px #f59e0b;
+    }
+
+    .queue-badge {
+      background: #000;
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+      border: 1px solid #38bdf8;
+    }
+
+    .btn-queue {
+      padding: 0;
+      border-radius: 4px;
+      background: #334155;
+      color: #38bdf8;
+      font-weight: bold;
+      border: 1px solid #475569;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+    }
+
+    .btn-queue:hover {
+      background: #475569;
+      color: white;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      background: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    th {
+      background-color: #0f172a;
+      color: #38bdf8;
+      padding: 15px;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      text-align: left;
+    }
+
+    td {
+      padding: 15px;
+      border-bottom: 1px solid #334155;
+      color: #cbd5e1;
+      font-size: 0.95em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: #334155;
+    }
+
+    pre {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85em;
+      color: #a7f3d0;
+      background: #0f172a;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .wrapper {
+      max-width: 1450px;
+      margin: 0 auto;
+    }
+
+    .bridge-status {
+      max-width: 520px;
+      margin: -22px auto 34px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.76);
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      color: #cbd5e1;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .bridge-status.ok {
+      border-color: rgba(16, 185, 129, 0.6);
+      color: #a7f3d0;
+    }
+
+    .bridge-status.bad {
+      border-color: rgba(239, 68, 68, 0.65);
+      color: #fecaca;
+    }
   </style>
 </head>
+
 <body>
 
-  <h2>🚦 V2I Infrastructure Control Hub</h2>
-  
-  <div class="control-panel">
-    <div class="control-group">
-      <h3>🛡️ System 3: Speed Limiter Zones</h3>
-      <button class="btn-danger" onclick="setSafety(true)">Flag Dangerous Zone</button>
-      <button class="btn-safe" onclick="setSafety(false)">Clear Area Flag</button>
-    </div>
-    <div class="control-group">
-      <h3>📉 System 3: Dynamic Leeway</h3>
-      <input type="range" id="speedSlider" min="40" max="255" value="255" oninput="updateLimiter(this.value)">
-      <div id="speedVal">Current Limit: 255 PWM</div>
-    </div>
-    <div class="control-group">
-      <h3>🚑 System 2: Emergency Priority</h3>
-      <input type="range" id="ambSlider" min="0" max="1000" value="1000" oninput="updateAmbulance(this.value)">
-      <div id="ambVal">Ambulance Distance: 1000m</div>
-    </div>
+  <div class="radar-bg">
+    <div class="scan-line"></div>
+    <div class="ambient-dot"></div>
+    <div class="ambient-dot"></div>
+    <div class="ambient-dot"></div>
+    <div class="ambient-dot"></div>
+  </div>
+  <div class="wrapper">
+    <h2>SignalSync<br><span
+        style="font-size: 0.35em; color: #94a3b8; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; -webkit-text-fill-color: #94a3b8; display: block; margin-top: 10px;">Intelligent
+        Traffic Management Hub</span></h2>
+    <div id="bridgeStatus" class="bridge-status">MQTT bridge: checking...</div>
+
+    <div class="main-layout">
+      <!-- LEFT PANEL: SYSTEM 3 -->
+      <div class="side-panel">
+        <div class="control-group">
+          <h3>🛡️ System 3: Speed Limiter Zones</h3>
+          <div style="display: flex; justify-content: space-between;">
+            <button class="btn-danger" onclick="setSafety(true)">Flag Dangerous Zone</button>
+            <button class="btn-safe" onclick="setSafety(false)">Clear Area Flag</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <h3>📉 System 3: Dynamic Leeway</h3>
+          <input type="range" id="speedSlider" min="40" max="255" value="255" oninput="updateLimiter(this.value)">
+          <div class="val-display" id="speedVal">Current Limit: 255 PWM</div>
+        </div>
+      </div>
+
+      <!-- CENTER PANEL: INTERSECTION -->
+      <div class="center-panel">
+        <div class="intersection-wrapper">
+          <div class="road-vertical"></div>
+          <div class="road-horizontal"></div>
+          <div class="intersection-center">
+            <div class="stop-line stop-north"></div>
+            <div class="stop-line stop-south"></div>
+            <div class="stop-line stop-east"></div>
+            <div class="stop-line stop-west"></div>
+          </div>
+
+          <div class="lane lane-north" id="lane-North"></div>
+          <div class="lane lane-south" id="lane-South"></div>
+          <div class="lane lane-east" id="lane-East"></div>
+          <div class="lane lane-west" id="lane-West"></div>
+
+          <div class="arm arm-north" id="arm-North">
+            <div class="arm-title">NORTH<br>(ESP32)</div>
+            <div class="light"></div>
+            <div class="queue-badge">🚗: 0</div>
+          </div>
+          <div class="arm arm-east" id="arm-East">
+            <div class="arm-title">EAST<br>(Sim)</div>
+            <div class="light"></div>
+            <div style="display: flex; gap: 5px; align-items: center; margin-top: 10px;">
+              <button class="btn-queue" onclick="changeQueue('East', -1)">-</button>
+              <div class="queue-badge" style="margin-top: 0;">🚗: 1</div>
+              <button class="btn-queue" onclick="changeQueue('East', 1)">+</button>
+            </div>
+          </div>
+          <div class="arm arm-south" id="arm-South">
+            <div class="arm-title">SOUTH<br>(Sim)</div>
+            <div class="light"></div>
+            <div style="display: flex; gap: 5px; align-items: center; margin-top: 10px;">
+              <button class="btn-queue" onclick="changeQueue('South', -1)">-</button>
+              <div class="queue-badge" style="margin-top: 0;">🚗: 0</div>
+              <button class="btn-queue" onclick="changeQueue('South', 1)">+</button>
+            </div>
+          </div>
+          <div class="arm arm-west" id="arm-West">
+            <div class="arm-title">WEST<br>(Sim)</div>
+            <div class="light"></div>
+            <div style="display: flex; gap: 5px; align-items: center; margin-top: 10px;">
+              <button class="btn-queue" onclick="changeQueue('West', -1)">-</button>
+              <div class="queue-badge" style="margin-top: 0;">🚗: 2</div>
+              <button class="btn-queue" onclick="changeQueue('West', 1)">+</button>
+            </div>
+          </div>
+        </div> <!-- Close intersection-wrapper -->
+      </div> <!-- Close center-panel -->
+
+      <!-- RIGHT PANEL: SYSTEM 2 -->
+      <div class="side-panel">
+        <div class="control-group">
+          <h3>🚑 System 2: Emergency Priority</h3>
+          <button id="ambToggleBtn" class="btn-amb-off" onclick="toggleAmbulance()">🚨 Trigger Emergency (150m)</button>
+          <input type="range" id="ambSlider" min="0" max="1000" value="1000" oninput="updateAmbulance(this.value)">
+          <div class="val-display" id="ambVal">Ambulance Distance: 1000m</div>
+        </div>
+      </div>
+
+    </div> <!-- Close main-layout -->
+
+    <h3 style="color: #38bdf8;">📝 System Audit Logs</h3>
+    <table id="logTable">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Decision Target</th>
+          <th>Payload Data</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>
 
-  <div class="intersection-container">
-    <div class="arm arm-north" id="arm-North">NORTH (Live ESP32)<div class="light"></div><div class="queue-badge">Q: 0</div></div>
-    <div class="arm arm-west" id="arm-West">WEST (Simulated)<div class="light"></div><div class="queue-badge">Q: 2</div></div>
-    <div class="center-box"></div>
-    <div class="arm arm-east" id="arm-East">EAST (Simulated)<div class="light"></div><div class="queue-badge">Q: 1</div></div>
-    <div class="arm arm-south" id="arm-South">SOUTH (Simulated)<div class="light"></div><div class="queue-badge">Q: 0</div></div>
-  </div>
+  <script>
+    async function setSafety(isDanger) { await fetch(`/toggle_danger?state=${isDanger}`); }
+    async function updateLimiter(val) {
+      document.getElementById('speedVal').innerText = `Current Limit: ${val} PWM`;
+      await fetch(`/set_limiter?val=${val}`);
+    }
+    async function changeQueue(arm, change) {
+      await fetch(`/update_queue?arm=${arm}&change=${change}`);
+      fetchIntersection(); // immediately refresh UI
+    }
 
-  <h3>System Audit Logs</h3>
-  <table id="logTable">
-    <thead><tr><th>Timestamp</th><th>Decision Target</th><th>Payload Data</th></tr></thead>
-    <tbody></tbody>
-  </table>
+    function drawCars(armName, count) {
+      const lane = document.getElementById(`lane-${armName}`);
+      if (!lane) return;
 
-<script>
-async function setSafety(isDanger) { await fetch(`/toggle_danger?state=${isDanger}`); }
-async function updateLimiter(val) { document.getElementById('speedVal').innerText = `Current Limit: ${val} PWM`; await fetch(`/set_limiter?val=${val}`); }
-async function updateAmbulance(val) { document.getElementById('ambVal').innerText = `Ambulance Distance: ${val}m`; await fetch(`/ambulance?dist=${val}`); }
+      const visualCount = Math.min(count, 6); // Max 6 cars drawn to prevent overflow
+      const currentCars = lane.childElementCount;
 
-async function fetchIntersection() {
-    try {
+      if (visualCount > currentCars) {
+        // Add new cars to the queue
+        for (let i = 0; i < (visualCount - currentCars); i++) {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'sim-car-wrapper';
+          const car = document.createElement('div');
+          car.className = 'sim-car';
+          wrapper.appendChild(car);
+          lane.appendChild(wrapper);
+        }
+      } else if (visualCount < currentCars) {
+        // Remove departing cars
+        for (let i = 0; i < (currentCars - visualCount); i++) {
+          lane.removeChild(lane.lastChild);
+        }
+      }
+    }
+
+    let isAmbTriggered = false;
+    async function toggleAmbulance() {
+      isAmbTriggered = !isAmbTriggered;
+      const targetDist = isAmbTriggered ? 150 : 1000;
+      // update slider visually immediately 
+      document.getElementById('ambSlider').value = targetDist;
+      await updateAmbulance(targetDist);
+    }
+
+    // Ensure manual sliding also syncs the button state
+    async function updateAmbulance(val) {
+      val = parseInt(val);
+      document.getElementById('ambVal').innerText = `Ambulance Distance: ${val}m`;
+      document.getElementById('ambSlider').value = val;
+
+      const btn = document.getElementById('ambToggleBtn');
+      if (val < 200) {
+        isAmbTriggered = true;
+        btn.className = "btn-amb-on";
+        btn.innerText = "🚨 Emergency ACTIVE (Cancel)";
+      } else {
+        isAmbTriggered = false;
+        btn.className = "btn-amb-off";
+        btn.innerText = "🚨 Trigger Emergency (150m)";
+      }
+      await fetch(`/ambulance?dist=${val}`);
+    }
+
+    async function fetchIntersection() {
+      try {
         const res = await fetch('/intersection_data');
         const state = await res.json();
         ['North', 'East', 'South', 'West'].forEach(armName => {
-            const armDiv = document.getElementById(`arm-${armName}`);
-            armDiv.querySelector('.queue-badge').innerText = `Q: ${state.queues[armName]}`;
-            const lightDiv = armDiv.querySelector('.light');
-            lightDiv.className = 'light';
-            if (state.active_arm === armName) lightDiv.classList.add(state.color);
-            else lightDiv.classList.add('RED');
+          const armDiv = document.getElementById(`arm-${armName}`);
+          armDiv.querySelector('.queue-badge').innerText = `🚗: ${state.queues[armName]}`;
+          const lightDiv = armDiv.querySelector('.light');
+          lightDiv.className = 'light';
+          if (state.active_arm === armName) lightDiv.classList.add(state.color);
+          else lightDiv.classList.add('RED');
+
+          drawCars(armName, state.queues[armName]);
         });
-    } catch(e) {}
-}
-
-async function fetchLatest(){
-  try{
-    const res = await fetch('/latest');
-    const rows = await res.json();
-    const tbody = document.querySelector('#logTable tbody');
-    tbody.innerHTML = '';
-    if(Array.isArray(rows) && rows.length > 0){
-      rows.reverse().forEach(r => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r[0] || ''}</td><td><strong>${r[1] || ''}</strong></td><td><pre>${r[2] || ''}</pre></td>`;
-        tbody.appendChild(tr);
-      });
+      } catch (e) { }
     }
-  } catch(e){}
-}
 
-setInterval(fetchIntersection, 300); // Fast UI response for lights
-setInterval(fetchLatest, 1000);
-fetchIntersection();
-fetchLatest();
-</script>
+    async function fetchLatest() {
+      try {
+        const res = await fetch('/latest');
+        const rows = await res.json();
+        const tbody = document.querySelector('#logTable tbody');
+        tbody.innerHTML = '';
+        if (Array.isArray(rows) && rows.length > 0) {
+          rows.reverse().forEach(r => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${r[0] || ''}</td><td><strong style="color: #93c5fd;">${r[1] || ''}</strong></td><td><pre>${r[2] || ''}</pre></td>`;
+            tbody.appendChild(tr);
+          });
+        }
+      } catch (e) { }
+    }
+
+    async function fetchMqttStatus() {
+      try {
+        const res = await fetch('/mqtt_status');
+        const status = await res.json();
+        const box = document.getElementById('bridgeStatus');
+        box.className = `bridge-status ${status.connected ? 'ok' : 'bad'}`;
+        const lastSeen = status.last_seen ? ` | last: ${status.last_topic} at ${status.last_seen}` : '';
+        const error = status.last_error ? ` | ${status.last_error}` : '';
+        box.innerText = `MQTT bridge: ${status.connected ? 'connected' : 'disconnected'} (${status.broker}:${status.port})${lastSeen}${error}`;
+      } catch (e) { }
+    }
+
+    setInterval(fetchIntersection, 300); // Fast UI response for lights
+    setInterval(fetchLatest, 1000);
+    setInterval(fetchMqttStatus, 1000);
+    fetchIntersection();
+    fetchLatest();
+    fetchMqttStatus();
+  </script>
 </body>
+
 </html>

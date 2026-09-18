@@ -1,0 +1,186 @@
+#include <WiFi.h>
+#include <PubSubClient.h>
+#include <ArduinoJson.h>
+
+// ================= PIN DEFINITIONS =================  
+const int ENTRY_IR = 5;
+const int EXIT_IR  = 4;
+const int RED_LED    = 19;
+const int YELLOW_LED = 18;
+const int GREEN_LED  = 22;
+
+const int ENA = 25; 
+const int IN1 = 26;
+const int IN2 = 33;
+
+// ================= PWM SETTINGS (ESP32 FIX) =================
+const int pwmChannel = 0;
+const int pwmFreq = 5000;
+const int pwmResolution = 8;
+
+// ================= NETWORK SETTINGS =================
+const char* ssid = "Aswindev iphone";
+const char* password = "123456789";
+const char* mqtt_server = "172.20.10.6";
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+// ================= STATE VARIABLES =================
+bool lastEntryState = HIGH;
+bool lastExitState  = HIGH;
+
+unsigned long signalTimer = 0;
+int signalState = 0; // 0=RED, 1=GREEN, 2=YELLOW
+long currentGreenDuration = 0;
+
+// =====================================================
+
+void setup_wifi() {
+  Serial.print("Connecting to WiFi: ");
+  Serial.println(ssid);
+  
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  
+  Serial.println("\nWiFi connected!");
+  Serial.print("IP: ");
+  Serial.println(WiFi.localIP());
+}
+
+// =====================================================
+
+void callback(char* topic, byte* payload, unsigned int length) {
+
+  StaticJsonDocument<200> doc;
+  deserializeJson(doc, payload);
+
+  // ===== SYSTEM 3: GOVERNOR =====
+  if (strcmp(topic, "city/governor") == 0) {
+    int pwm = doc["pwm"];
+    ledcWrite(pwmChannel, pwm);
+    Serial.print("⚙ Motor PWM set to: ");
+    Serial.println(pwm);
+  }
+
+  // ===== SYSTEM 1 & 2: SIGNAL =====
+  if (strcmp(topic, "city/signal") == 0) {
+
+    String color = doc["color"];
+
+    if (color == "GREEN") {
+
+      currentGreenDuration = doc["duration"];
+      currentGreenDuration *= 1000; // convert to ms
+
+      signalState = 1;
+      signalTimer = millis();
+
+      digitalWrite(RED_LED, LOW);
+      digitalWrite(YELLOW_LED, LOW);
+      digitalWrite(GREEN_LED, HIGH);
+
+      Serial.print("🚦 GREEN for ");
+      Serial.print(currentGreenDuration / 1000);
+      Serial.println(" sec");
+    }
+  }
+}
+
+// =====================================================
+
+void reconnect() {
+  while (!client.connected()) {
+    Serial.print("Connecting MQTT... ");
+    if (client.connect("ESP32_Intersection")) {
+      Serial.println("CONNECTED");
+      client.subscribe("city/signal");
+      client.subscribe("city/governor");
+    } else {
+      Serial.print("Failed. State=");
+      Serial.println(client.state());
+      delay(5000);
+    }
+  }
+}
+
+// =====================================================
+
+void setup() {
+
+  Serial.begin(115200);
+  Serial.println("Booting Smart Intersection Node...");
+
+  pinMode(ENTRY_IR, INPUT);
+  pinMode(EXIT_IR, INPUT);
+
+  pinMode(RED_LED, OUTPUT);
+  pinMode(YELLOW_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+
+  digitalWrite(RED_LED, HIGH);
+
+  // ===== PWM SETUP =====
+  ledcSetup(pwmChannel, pwmFreq, pwmResolution);
+  ledcAttachPin(ENA, pwmChannel);
+  ledcWrite(pwmChannel, 0);
+
+  setup_wifi();
+  client.setServer(mqtt_server, 1883);
+  client.setCallback(callback);
+}
+
+// =====================================================
+
+void loop() {
+
+  if (!client.connected()) reconnect();
+  client.loop();
+
+  // ===== SENSOR DETECTION =====
+  bool entryState = digitalRead(ENTRY_IR);
+  bool exitState  = digitalRead(EXIT_IR);
+
+  if (entryState == LOW && lastEntryState == HIGH) {
+    Serial.println("🚗 Car Entered");
+    client.publish("road/in", "{\"event\":\"entry\"}");
+    delay(50);
+  }
+
+  if (exitState == LOW && lastExitState == HIGH) {
+    Serial.println("🏁 Car Exited");
+    client.publish("road/out", "{\"event\":\"exit\"}");
+    delay(50);
+  }
+
+  lastEntryState = entryState;
+  lastExitState  = exitState;
+
+  // ===== SIGNAL STATE MACHINE =====
+
+  if (signalState == 1 && millis() - signalTimer > currentGreenDuration) {
+    signalState = 2;
+    signalTimer = millis();
+    digitalWrite(GREEN_LED, LOW);
+    digitalWrite(YELLOW_LED, HIGH);
+    Serial.println("🟡 YELLOW");
+  }
+
+  else if (signalState == 2 && millis() - signalTimer > 2000) {
+    signalState = 0;
+    digitalWrite(YELLOW_LED, LOW);
+    digitalWrite(RED_LED, HIGH);
+    Serial.println("🔴 RED");
+
+    client.publish("city/status", "{\"state\":\"cycle_complete\"}");
+  }
+}
